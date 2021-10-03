@@ -1,0 +1,12 @@
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Persistencia\obj\Debug\netstandard2.1\SGE.App.Persistencia.csprojAssemblyReference.cache
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Persistencia\obj\Debug\netstandard2.1\SGE.App.Persistencia.AssemblyInfoInputs.cache
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Persistencia\obj\Debug\netstandard2.1\SGE.App.Persistencia.AssemblyInfo.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Persistencia\obj\Debug\netstandard2.1\SGE.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\educa\SGE.App\SGE.App.Persistencia\bin\Debug\netstandard2.1\SGE.App.Persistencia.deps.json
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\educa\SGE.App\SGE.App.Persistencia\bin\Debug\netstandard2.1\SGE.App.Persistencia.dll
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\educa\SGE.App\SGE.App.Persistencia\bin\Debug\netstandard2.1\SGE.App.Persistencia.pdb
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\educa\SGE.App\SGE.App.Persistencia\bin\Debug\netstandard2.1\SGE.App.Dominio.dll
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\educa\SGE.App\SGE.App.Persistencia\bin\Debug\netstandard2.1\SGE.App.Dominio.pdb
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\educa\SGE.App\SGE.App.Persistencia\obj\Debug\netstandard2.1\SGE.App.Persistencia.csproj.CopyComplete
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\educa\SGE.App\SGE.App.Persistencia\obj\Debug\netstandard2.1\SGE.App.Persistencia.dll
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\educa\SGE.App\SGE.App.Persistencia\obj\Debug\netstandard2.1\SGE.App.Persistencia.pdb
