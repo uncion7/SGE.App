@@ -56,7 +56,7 @@ namespace SGE.App.Persistencia
             if(departamentoEncontrado!=null)
             {
                 departamentoEncontrado.Nombre = departamento.Nombre;
-                departamentoEncontrado.Municipios = departamento.Municipios;
+                //departamentoEncontrado.Municipios = departamento.Municipios;
 
                 _appContext.SaveChanges();
             }
