@@ -36,8 +36,10 @@
                     <a class = "btn btn-primary table-btn" data-toggle = "tooltip" data-placement = "top" title = "Editar" asp-page = "./CicloEdit" asp-route-cicloId = "@c.Id">
                         <i class = "fas fa-edit" aria-hidden = "true"></i>
                     </a>
-                    <a class = "btn btn-primary table-btn" data-toggle = "tooltip" data-placement = "top" title = "Eliminar" asp-page = "" asp-route-cicloId = "@c.Id">
-                        <i class = "fas fa-trash"></i>
+                    <a class="btn btn-danger table-btn" data-toggle="modal" data-target="#m-@c.Id">
+                        <span class="data-toggle="tooltip" data-placement="top" title="Eliminar">
+                            <i class="fas fa-trash"></i>
+                        </span>
                     </a>
                 </td>
 

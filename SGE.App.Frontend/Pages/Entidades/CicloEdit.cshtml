@@ -4,11 +4,15 @@
 }
 
 <h1>Ciclo</h1>
-<form>
+<form method="post">
     <input type = "hidden" asp-for = "Ciclo.Id">
     <div class = "form-group">
         <label asp-for = "Ciclo.Nombre"></label>
         <input asp-for = "Ciclo.Nombre" class = "form-control">
+    </div>
+    <div class = "form-group">
+        <label asp-for = "Ciclo.Codigo"></label>
+        <input asp-for = "Ciclo.Codigo" class = "form-control">
     </div>
     <div class = "col-12">
         <nav>

@@ -25,7 +25,7 @@ namespace SGE.App.Persistencia
             _appContext = appContext;
         }
 
-        Ciclo IRepositorioCiclo.AddCiclo(Ciclo ciclo)
+        public Ciclo AddCiclo(Ciclo ciclo)
         {
             var cicloAdicionado =_appContext.Ciclos.Add(ciclo);
             _appContext.SaveChanges();
