@@ -8,7 +8,7 @@
         <h1>Lista Departamentos</h1>
     </div>
     <div class="col-2 text-right">
-        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Crear" asp-page="">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Crear" asp-page="./DeptoEdit">
             <i class="fas fa-plus"></i>
         </a>
     </div>
@@ -28,11 +28,14 @@
                 <td>@d.Id</td>
                 <td>@d.Nombre</td>
                 <td>
-                    <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Ver" asp-page="" asp-route-departamentoId="@d.Id">
+                    <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Ver" asp-page="./DeptoDetail" asp-route-departamentoId="@d.Id">
                         <i class="fas fa-eye"></i>
                     </a>
-                    <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Editar" asp-page="" asp-route-departamentoId="@d.Id">
+                    <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Editar" asp-page="./DeptoEdit" asp-route-departamentoId="@d.Id">
                         <i class="fas fa-edit" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-danger table-btn" data-toggle="tooltip" data-placement="top" title="Eliminar" asp-page="" asp-route-departamentoId="@d.Id">
+                        <i class="fas fa-trash"></i>
                     </a>
                 </td>
             </tr>

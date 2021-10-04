@@ -1,0 +1,10 @@
+﻿@page
+@model SGE.App.Frontend.Pages.DeptoDetailModel
+@{
+}
+<h1>Departamento</h1>
+<p>Id: @Model.Departamento.Id</p>
+<p>Nombre: @Model.Departamento.Nombre</p>
+<a asp-page="./DeptoList" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar">
+    <i class="fas fa-list-ul"></i>
+</a>

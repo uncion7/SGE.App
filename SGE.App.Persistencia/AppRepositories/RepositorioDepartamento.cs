@@ -30,6 +30,31 @@ namespace SGE.App.Persistencia
             return _appContext.Departamentos;
         }
 
+        public Departamento AddDepartamento(Departamento departamento)
+        {
+            var departamentoAdicionado =_appContext.Departamentos.Add(departamento);
+            _appContext.SaveChanges();
+            return departamentoAdicionado.Entity;
+        }
+
+        public Departamento GetDepartamentoPorId(int departamentoId)
+        {
+            return _appContext.Departamentos.SingleOrDefault(d => d.Id==departamentoId);
+        }
+
+        public Departamento UpdateDepartamento(Departamento departamentoActualizado)
+        {
+            var departamento = _appContext.Departamentos.SingleOrDefault(d => d.Id==departamentoActualizado.Id);
+            if(departamento!=null)
+            {
+                departamento.Id = departamentoActualizado.Id;
+                departamento.Nombre = departamentoActualizado.Nombre;
+
+                _appContext.SaveChanges();
+            }
+            return departamento;
+        }
+
         /*
         //CRUD PARA APLICACION POR CONSOLA
 
