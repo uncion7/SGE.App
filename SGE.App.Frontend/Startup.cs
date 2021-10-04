@@ -25,9 +25,10 @@ namespace SGE.App.Frontend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<SGE.App.Persistencia.AppContext>(options=>{options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));});
             services.AddRazorPages();
+            services.AddDbContext<SGE.App.Persistencia.AppContext>();
             services.AddScoped<IRepositorioDepartamento, RepositorioDepartamento>();
+            services.AddScoped<IRepositorioCiclo, RepositorioCiclo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

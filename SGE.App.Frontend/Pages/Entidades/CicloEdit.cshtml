@@ -2,3 +2,26 @@
 @model SGE.App.Frontend.Pages.CicloEditModel
 @{
 }
+
+<h1>Ciclo</h1>
+<form>
+    <input type = "hidden" asp-for = "Ciclo.Id">
+    <div class = "form-group">
+        <label asp-for = "Ciclo.Nombre"></label>
+        <input asp-for = "Ciclo.Nombre" class = "form-control">
+    </div>
+    <div class = "col-12">
+        <nav>
+            <a asp-page="./CicloList" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar">
+                <i class="fas fa-list-ul"></i>
+            </a>
+            <button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Guardar">
+                <i class="fas fa-save"></i>        
+            </button>
+        </div>
+
+    </div>
+
+
+</form>
+

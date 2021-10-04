@@ -9,8 +9,9 @@ namespace SGE.App.Persistencia
         Departamento GetDepartamentoPorId(int departamentoId);
         Departamento UpdateDepartamento(Departamento departamentoActualizado);
         Departamento AddDepartamento(Departamento departamento);
+        void DeleteDepartamento(int departamentoId);
+
         //Departamento UpdateDepartamento(Departamento departamento);
-        //void DeleteDepartamento(int idDepartamento);
         //Departamento GetDepartamento(int idDepartamento); 
     }
 }
