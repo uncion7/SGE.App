@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using SGE.App.Dominio;
+using SGE.App.Persistencia;
 
 namespace SGE.App.Persistencia
 {
@@ -8,7 +9,7 @@ namespace SGE.App.Persistencia
     {
         
         ///<sumary>
-        ///Referencia al contexto del Municipio
+        ///Referencia al contexto del Ciclo
         ///</sumary>
         
         private readonly AppContext _appContext;
@@ -24,7 +25,7 @@ namespace SGE.App.Persistencia
             _appContext = appContext;
         }
 
-        Ciclo IRepositorioCiclo.AddCiclo(Ciclo ciclo)
+        public Ciclo AddCiclo(Ciclo ciclo)
         {
             var cicloAdicionado =_appContext.Ciclos.Add(ciclo);
             _appContext.SaveChanges();
@@ -45,9 +46,9 @@ namespace SGE.App.Persistencia
             return _appContext.Ciclos;
         }
 
-        Ciclo IRepositorioCiclo.GetCiclo(int idCiclo)
+        Ciclo IRepositorioCiclo.GetCiclo(int cicloId)
         {
-            return _appContext.Ciclos.FirstOrDefault(m => m.Id==idCiclo);
+            return _appContext.Ciclos.SingleOrDefault(m => m.Id==cicloId);
         }
 
         Ciclo IRepositorioCiclo.UpdateCiclo(Ciclo ciclo)

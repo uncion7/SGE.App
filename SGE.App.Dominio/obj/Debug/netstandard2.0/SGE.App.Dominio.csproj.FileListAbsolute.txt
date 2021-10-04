@@ -7,3 +7,12 @@ C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Domin
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Dominio\bin\Debug\netstandard2.0\SGE.App.Dominio.pdb
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Dominio\obj\Debug\netstandard2.0\SGE.App.Dominio.dll
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Dominio\obj\Debug\netstandard2.0\SGE.App.Dominio.pdb
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Dominio\bin\Debug\netstandard2.0\SGE.App.Dominio.deps.json
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Dominio\bin\Debug\netstandard2.0\SGE.App.Dominio.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Dominio\bin\Debug\netstandard2.0\SGE.App.Dominio.pdb
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Dominio\obj\Debug\netstandard2.0\SGE.App.Dominio.csprojAssemblyReference.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Dominio\obj\Debug\netstandard2.0\SGE.App.Dominio.AssemblyInfoInputs.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Dominio\obj\Debug\netstandard2.0\SGE.App.Dominio.AssemblyInfo.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Dominio\obj\Debug\netstandard2.0\SGE.App.Dominio.csproj.CoreCompileInputs.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Dominio\obj\Debug\netstandard2.0\SGE.App.Dominio.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Dominio\obj\Debug\netstandard2.0\SGE.App.Dominio.pdb

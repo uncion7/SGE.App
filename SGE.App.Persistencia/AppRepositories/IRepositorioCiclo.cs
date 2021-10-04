@@ -9,6 +9,6 @@ namespace SGE.App.Persistencia
         Ciclo AddCiclo(Ciclo ciclo);
         Ciclo UpdateCiclo(Ciclo ciclo);
         void DeleteCiclo(int idCiclo);
-        Ciclo GetCiclo(int idCiclo); 
+        Ciclo GetCiclo(int cicloId); 
     }
 }
