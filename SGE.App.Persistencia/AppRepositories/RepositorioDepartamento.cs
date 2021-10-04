@@ -55,6 +55,16 @@ namespace SGE.App.Persistencia
             return departamento;
         }
 
+        void IRepositorioDepartamento.DeleteDepartamento(int departamentoId)
+        {
+            var departamentoEncontrado = _appContext.Departamentos.FirstOrDefault(m => m.Id==departamentoId);
+            if(departamentoEncontrado==null)
+                return;
+            _appContext.Departamentos.Remove(departamentoEncontrado);
+            _appContext.SaveChanges();
+        }
+
+
         /*
         //CRUD PARA APLICACION POR CONSOLA
 

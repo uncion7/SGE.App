@@ -19,9 +19,13 @@ namespace SGE.App.Frontend.Pages
             this.repositorioDepartamento = repositorioDepartamento;
         }
         
-        public void OnGet()
+        public void OnGet(int? departamentoId)
         {
-            Departamentos = repositorioDepartamento.GetAllDepartamentos();   
+            if(departamentoId>0)
+            {
+                repositorioDepartamento.DeleteDepartamento(departamentoId.Value);
+            }
+            Departamentos = repositorioDepartamento.GetAllDepartamentos();
         }
     }
 }
