@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using SGE.App.Dominio;
+using SGE.App.Persistencia;
 
 namespace SGE.App.Persistencia
 {
@@ -23,6 +24,14 @@ namespace SGE.App.Persistencia
         {
             _appContext = appContext;
         }
+
+        public IEnumerable<Departamento> GetAllDepartamentos()
+        {
+            return _appContext.Departamentos;
+        }
+
+        /*
+        //CRUD PARA APLICACION POR CONSOLA
 
         Departamento IRepositorioDepartamento.AddDepartamento(Departamento departamento)
         {
@@ -62,6 +71,7 @@ namespace SGE.App.Persistencia
             }
             return departamentoEncontrado;
         }
+        */
         
     }
 }

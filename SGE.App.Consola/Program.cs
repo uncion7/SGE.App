@@ -18,10 +18,10 @@ namespace SGE.App.Consola
             
             //MUNICIPIO
             //CrearMunicipio();
-            EditarMunicipio(4);
+            //EditarMunicipio(4);
             //EliminarMunicipio(3);
-            BuscarMunicipio(1);
-            BuscarTodosMunicipios();
+            //BuscarMunicipio(1);
+            //BuscarTodosMunicipios();
             
             //ROL
             //CrearRol();
@@ -38,6 +38,7 @@ namespace SGE.App.Consola
             //EliminarUsuario();
         }
 
+        /*
         //Funciones por consola
 
         //CRUD Municipio
@@ -188,6 +189,7 @@ namespace SGE.App.Consola
             _repoUsuario.DeleteUsuario(idUsuario);
             Console.WriteLine("Usuario Borrado");
         }
+        */
         
     }
 }
