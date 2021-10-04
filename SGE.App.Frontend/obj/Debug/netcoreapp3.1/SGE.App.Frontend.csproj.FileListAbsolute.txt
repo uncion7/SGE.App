@@ -82,3 +82,6 @@ C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Front
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\SGE.App.Dominio.pdb
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\DeptoEdit.cshtml.g.cs
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\DeptoDetail.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MunicipioList.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MunicipioDetail.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MunicipioEdit.cshtml.g.cs
