@@ -180,19 +180,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mcordoba\\.nuget\\packages\\": {}
+    "C:\\Users\\USUARIO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj",
+      "projectUniqueName": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj",
       "projectName": "SGE.App.Dominio",
-      "projectPath": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj",
-      "packagesPath": "C:\\Users\\mcordoba\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Dominio\\obj\\",
+      "projectPath": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj",
+      "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+      "outputPath": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mcordoba\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"

@@ -1,0 +1,48 @@
+﻿@page
+@model SGE.App.Frontend.Pages.CicloListModel
+@{
+}
+
+<div class = "row">
+    <div class = "col-10">
+        <h1>
+            Lista Ciclos
+        </h1>
+    </div>
+    <div class = "col-2 text-right">
+        <a class = "btn btn-primary" data-toggle = "tooltip" data-placement = "top" title = "Crear" asp-Page = "./CicloEdit">
+            <i class = "fas fa-plus"></i>
+        </a>
+    </div>
+</div>
+<table class = "table teable-striped">
+    <thead class = "table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model.Ciclos)
+        {
+            <tr>
+                <td>@c.Id</td>
+                <td>@c.Nombre</td>
+                <td>
+                    <a class = "btn btn-primary table-btn" data-toggle = "tooltip" data-placement = "top" title = "Ver" asp-page = "./CicloDetail" asp-route-ciclosId = "@c.Id">
+                        <i class = "fas fa-eye"></i>
+                    </a>
+                    <a class = "btn btn-primary table-btn" data-toggle = "tooltip" data-placement = "top" title = "Editar" asp-page = "./CicloEdit" asp-route-ciclosId = "@c.Id">
+                        <i class = "fas fa-edit" aria-hidden = "true"></i>
+                    </a>
+                    <a class = "btn btn-primary table-btn" data-toggle = "tooltip" data-placement = "top" title = "Eliminar" asp-page = "" asp-route-ciclosId = "@c.Id">
+                        <i class = "fas fa-trash"></i>
+                    </a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>

@@ -66,3 +66,9 @@ C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\educa\SGE.App\SGE.App.Conso
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\educa\SGE.App\SGE.App.Consola\obj\Debug\netcoreapp3.1\SGE.App.Consola.dll
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\educa\SGE.App\SGE.App.Consola\obj\Debug\netcoreapp3.1\SGE.App.Consola.pdb
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\educa\SGE.App\SGE.App.Consola\obj\Debug\netcoreapp3.1\SGE.App.Consola.genruntimeconfig.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Consola\obj\Debug\netcoreapp3.1\SGE.App.Consola.csprojAssemblyReference.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Consola\obj\Debug\netcoreapp3.1\SGE.App.Consola.AssemblyInfoInputs.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Consola\obj\Debug\netcoreapp3.1\SGE.App.Consola.AssemblyInfo.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Consola\obj\Debug\netcoreapp3.1\SGE.App.Consola.csproj.CoreCompileInputs.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Consola\obj\Debug\netcoreapp3.1\SGE.App.Consola.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Consola\obj\Debug\netcoreapp3.1\SGE.App.Consola.pdb

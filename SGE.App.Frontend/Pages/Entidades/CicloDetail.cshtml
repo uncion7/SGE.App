@@ -1,0 +1,12 @@
+﻿@page
+@model SGE.App.Frontend.Pages.CicloDetailModel
+@{
+}
+
+<h1>Ciclo</h1>
+<p>Id: @Model.Ciclo.Id</p>
+<p>Nombre: @Model.Ciclo.Nombre</p>
+<p>Codigo: @Model.Ciclo.Codigo</p>
+<a ap-page = "./CicloList" class = "btn btn-primary" data-toggle = "toolip" data-placement = "top" title = "Listar">
+    <i class = "fas fa-list-ul"></i>
+</a>
