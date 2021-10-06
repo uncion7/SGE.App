@@ -56,6 +56,7 @@ namespace SGE.App.Persistencia
             if(municipioEncontrado!=null)
             {
                 municipioEncontrado.Nombre = municipio.Nombre;
+                municipioEncontrado.Departamento = municipio.Departamento;
                 _appContext.SaveChanges();
             }
             return municipioEncontrado;

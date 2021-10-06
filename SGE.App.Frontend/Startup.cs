@@ -29,6 +29,8 @@ namespace SGE.App.Frontend
             services.AddDbContext<SGE.App.Persistencia.AppContext>();
             services.AddScoped<IRepositorioDepartamento, RepositorioDepartamento>();
             services.AddScoped<IRepositorioMunicipio, RepositorioMunicipio>();
+            services.AddScoped<IRepositorioRol, RepositorioRol>();
+            services.AddScoped<IRepositorioCiclo, RepositorioCiclo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

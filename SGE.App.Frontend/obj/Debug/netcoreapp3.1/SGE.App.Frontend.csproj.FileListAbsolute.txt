@@ -88,3 +88,6 @@ C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Front
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\CicloDetail.cshtml.g.cs
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\CicloEdit.cshtml.g.cs
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\CicloList.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\RolDetail.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\RolEdit.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\RolList.cshtml.g.cs

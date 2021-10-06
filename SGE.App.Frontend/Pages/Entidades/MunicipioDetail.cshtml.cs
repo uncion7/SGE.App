@@ -11,7 +11,7 @@ namespace SGE.App.Frontend.Pages
 {
     public class MunicipioDetailModel : PageModel
     {
-       private readonly IRepositorioMunicipio repositorioMunicipio;
+        private readonly IRepositorioMunicipio repositorioMunicipio;
         public Municipio Municipio {get; set;}
 
         public MunicipioDetailModel(IRepositorioMunicipio repositorioMunicipio)

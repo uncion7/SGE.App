@@ -1,13 +1,13 @@
 ﻿@page
-@model SGE.App.Frontend.Pages.MunicipioListModel
+@model SGE.App.Frontend.Pages.RolListModel
 @{
 }
 <div class="row">
     <div class="col-10">
-        <h1>Lista Municipios</h1>
+        <h1>Lista Roles</h1>
     </div>
     <div class="col-2 text-right">
-        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Crear" asp-page="./MunicipioEdit">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Crear" asp-page="./RolEdit">
             <i class="fas fa-plus"></i>
         </a>
     </div>
@@ -21,38 +21,38 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var m in Model.Municipios)
+        @foreach(var r in Model.Roles)
         {
             <tr>
-                <td>@m.Id</td>
-                <td>@m.Nombre</td>
+                <td>@r.Id</td>
+                <td>@r.Nombre</td>
                 <td>
-                    <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Ver" asp-page="./MunicipioDetail" asp-route-municipioId="@m.Id">
+                    <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Ver" asp-page="./RolDetail" asp-route-rolId="@r.Id">
                         <i class="fas fa-eye"></i>
                     </a>
-                    <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Editar" asp-page="./MunicipioEdit" asp-route-municipioId="@m.Id">
+                    <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Editar" asp-page="./RolEdit" asp-route-rolId="@r.Id">
                         <i class="fas fa-edit" aria-hidden="true"></i>
                     </a>
-                    <a class="btn btn-danger table-btn" data-toggle="modal" data-target="#m-@m.Id">
+                    <a class="btn btn-danger table-btn" data-toggle="modal" data-target="#m-@r.Id">
                         <i class="fas fa-trash" data-toggle="tooltip" data-placement="top" title="Eliminar"></i>
                     </a>
                 </td>
             </tr>
-            <div class="modal fade" id="m-@m.Id" tabindex="-1" role="dialog" aria-labelledby="m-@m.Id" aria-hidden="true">
+            <div class="modal fade" id="m-@r.Id" tabindex="-1" role="dialog" aria-labelledby="m-@r.Id" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="m-@m.Id">Confirmación</h5>
+                            <h5 class="modal-title" id="m-@r.Id">Confirmación</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Desea eliminar este registro: @m.Nombre</p>
+                            <p>Desea eliminar este registro: @r.Nombre</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Eliminar" asp-page="./MunicipioList" asp-route-municipioId="@m.Id">
+                            <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Eliminar" asp-page="./RolList" asp-route-rolId="@r.Id">
                                 Eliminar
                             </a>
                         </div>
