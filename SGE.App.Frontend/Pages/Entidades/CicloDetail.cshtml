@@ -2,11 +2,33 @@
 @model SGE.App.Frontend.Pages.CicloDetailModel
 @{
 }
-
-<h1>Ciclo</h1>
-<p>Id: @Model.Ciclo.Id</p>
-<p>Nombre: @Model.Ciclo.Nombre</p>
-<p>Codigo: @Model.Ciclo.Codigo</p>
-<a ap-page = "./CicloList" class = "btn btn-primary" data-toggle = "toolip" data-placement = "top" title = "Listar">
-    <i class = "fas fa-list-ul"></i>
-</a>
+<div class="row">
+    <div class="col-10">
+        <h1>Ciclo:@Model.Ciclo.Codigo</h1>
+    </div>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./CicloList">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+</div>
+<div class=row>
+    <div class=col-4>
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td>@Model.Ciclo.Id</td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td>@Model.Ciclo.Nombre</td>
+                </tr>
+                <tr>
+                    <td>Codigo</td>
+                    <td>@Model.Ciclo.Codigo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

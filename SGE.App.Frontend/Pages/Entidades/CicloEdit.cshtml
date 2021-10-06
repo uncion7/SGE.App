@@ -2,30 +2,29 @@
 @model SGE.App.Frontend.Pages.CicloEditModel
 @{
 }
-
-<h1>Ciclo</h1>
-<form method="post">
-    <input type = "hidden" asp-for = "Ciclo.Id">
-    <div class = "form-group">
-        <label asp-for = "Ciclo.Nombre"></label>
-        <input asp-for = "Ciclo.Nombre" class = "form-control">
+<div class="row">
+    <div class="col-10">
+        <h1>Ciclo:@Model.Ciclo.Codigo</h1>
     </div>
-    <div class = "form-group">
-        <label asp-for = "Ciclo.Codigo"></label>
-        <input asp-for = "Ciclo.Codigo" class = "form-control">
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./CicloList">
+            <i class="fas fa-list-ul"></i>
+        </a>
     </div>
-    <div class = "col-12">
-        <nav>
-            <a asp-page="./CicloList" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar">
-                <i class="fas fa-list-ul"></i>
-            </a>
-            <button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Guardar">
-                <i class="fas fa-save"></i>        
-            </button>
-        </div>
-
+</div>
+<form method="post" action="">
+    <input type="hidden" asp-for="Ciclo.Id">
+    <div class="form-group">
+        <label asp-for="Ciclo.Nombre"></label>
+        <input asp-for="Ciclo.Nombre" class="form-control">
+        <span asp-validation-for="Ciclo.Nombre" class="text-danger"></span>
     </div>
-
-
+    <div class="form-group">
+        <label asp-for="Ciclo.Codigo"></label>
+        <input asp-for="Ciclo.Codigo" class="form-control">
+        <span asp-validation-for="Ciclo.Codigo" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" data-toggle="tooltip" data-placement="top" title="Guardar">
+        <i class="fas fa-2x fa-save"></i>        
+    </button>
 </form>
-
