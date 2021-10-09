@@ -44,17 +44,17 @@ namespace SGE.App.Persistencia
 
         IEnumerable<Usuario> IRepositorioUsuario.GetAllUsuarios()
         {
-            return _appContext.Usuarios;
+            return _appContext.Usuarios.Include(g => g.Municipio).Include(g=>g.Rol);;
         }
 
         Usuario IRepositorioUsuario.GetUsuario(int idUsuario)
         {
-            return _appContext.Usuarios.FirstOrDefault(m => m.Id==idUsuario);
+            return _appContext.Usuarios.Include(m => m.Municipio).Include(m => m.Rol).FirstOrDefault(m => m.Id==idUsuario);
         }
 
         Usuario IRepositorioUsuario.UpdateUsuario(Usuario usuario)
         {
-            var usuarioEncontrado =_appContext.Usuarios.FirstOrDefault(m => m.Id==usuario.Id);
+            var usuarioEncontrado =_appContext.Usuarios.Include(m => m.Municipio).Include(m => m.Rol).FirstOrDefault(m => m.Id==usuario.Id);
             if(usuarioEncontrado!=null)
             {
                 usuarioEncontrado.Cedula = usuario.Cedula;

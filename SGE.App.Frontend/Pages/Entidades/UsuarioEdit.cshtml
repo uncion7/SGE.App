@@ -1,0 +1,66 @@
+﻿@page
+@model SGE.App.Frontend.Pages.UsuarioEditModel
+@{
+}
+<div class="row">
+    <div class="col-10">
+        <h1>Usuario:@Model.Usuario.Nombre</h1>
+    </div>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./UsuarioList">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+</div>
+<form method="post" action="">
+    <input type="hidden" asp-for="Usuario.Id">
+    <div class="form-group">
+        <label asp-for="Usuario.Nombre"></label>
+        <input asp-for="Usuario.Nombre" class="form-control">
+        <span asp-validation-for="Usuario.Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Usuario.Apellidos"></label>
+        <input asp-for="Usuario.Apellidos" class="form-control">
+        <span asp-validation-for="Usuario.Apellidos" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Usuario.Correo"></label>
+        <input asp-for="Usuario.Correo" class="form-control">
+        <span asp-validation-for="Usuario.Correo" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Usuario.Celular"></label>
+        <input asp-for="Usuario.Celular" class="form-control">
+        <span asp-validation-for="Usuario.Celular" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Usuario.Telefono"></label>
+        <input asp-for="Usuario.Telefono" class="form-control">
+        <span asp-validation-for="Usuario.Telefono" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Usuario.Direccion"></label>
+        <input asp-for="Usuario.Direccion" class="form-control">
+        <span asp-validation-for="Usuario.Direccion" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Usuario.Municipio"></label>
+        <select asp-for="MunicipioID" name="MunicipioID" class="form-control" asp-items="Model.listaMunicipios">
+            <option>--- Seleccione un Municipio ---</option>
+        </select>
+        <span asp-validation-for="Usuario.Municipio" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Usuario.Rol"></label>
+        <select asp-for="RolID" name="RolID" class="form-control" asp-items="Model.listaRoles">
+            <option>--- Seleccione un Rol ---</option>
+        </select>
+        <span asp-validation-for="Usuario.Rol" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" data-toggle="tooltip" data-placement="top" title="Guardar">
+        <i class="fas fa-2x fa-save"></i>        
+    </button>
+</form>
+
+

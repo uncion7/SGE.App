@@ -1,13 +1,13 @@
 ﻿@page
-@model SGE.App.Frontend.Pages.MunicipioListModel
+@model SGE.App.Frontend.Pages.UsuarioListModel
 @{
 }
 <div class="row">
     <div class="col-10">
-        <h1>Lista Municipios</h1>
+        <h1>Lista Usuarios</h1>
     </div>
     <div class="col-2 text-right">
-        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Crear" asp-page="./MunicipioEdit">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Crear" asp-page="./UsuarioEdit">
             <i class="fas fa-plus"></i>
         </a>
     </div>
@@ -17,44 +17,48 @@
         <tr>
             <th>Id</th>
             <th>Nombre</th>
-            <th>Departamento</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Rol</th>
             <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
-        @foreach(var m in Model.Municipios)
+        @foreach(var u in Model.Usuarios)
         {
             <tr>
-                <td>@m.Id</td>
-                <td>@m.Nombre</td>
-                <td>@m.Departamento.Nombre</td>
+                <td>@u.Id</td>
+                <td>@u.Nombre</td>
+                <td>@u.Apellidos</td>
+                <td>@u.Correo</td>
+                <td>@u.Rol.Nombre</td>
                 <td>
-                    <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Ver" asp-page="./MunicipioDetail" asp-route-municipioId="@m.Id">
+                    <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Ver" asp-page="./UsuarioDetail" asp-route-usuarioId="@u.Id">
                         <i class="fas fa-eye"></i>
                     </a>
-                    <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Editar" asp-page="./MunicipioEdit" asp-route-municipioId="@m.Id">
+                    <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Editar" asp-page="./UsuarioEdit" asp-route-usuarioId="@u.Id">
                         <i class="fas fa-edit" aria-hidden="true"></i>
                     </a>
-                    <a class="btn btn-danger table-btn" data-toggle="modal" data-target="#m-@m.Id">
+                    <a class="btn btn-danger table-btn" data-toggle="modal" data-target="#m-@u.Id">
                         <i class="fas fa-trash" data-toggle="tooltip" data-placement="top" title="Eliminar"></i>
                     </a>
                 </td>
             </tr>
-            <div class="modal fade" id="m-@m.Id" tabindex="-1" role="dialog" aria-labelledby="m-@m.Id" aria-hidden="true">
+            <div class="modal fade" id="m-@u.Id" tabindex="-1" role="dialog" aria-labelledby="m-@u.Id" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="m-@m.Id">Confirmación</h5>
+                            <h5 class="modal-title" id="m-@u.Id">Confirmación</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Desea eliminar este registro: @m.Nombre</p>
+                            <p>Desea eliminar este registro: @u.Nombre</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Eliminar" asp-page="./MunicipioList" asp-route-municipioId="@m.Id">
+                            <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Eliminar" asp-page="./UsuarioList" asp-route-usuarioId="@u.Id">
                                 Eliminar
                             </a>
                         </div>

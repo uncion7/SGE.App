@@ -1,0 +1,58 @@
+﻿@page
+@model SGE.App.Frontend.Pages.UsuarioDetailModel
+@{
+}
+<div class="row">
+    <div class="col-10">
+        <h1>Usuario:@Model.Usuario.Nombre</h1>
+    </div>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./UsuarioList">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+</div>
+<div class=row>
+    <div class=col-4>
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td>@Model.Usuario.Id</td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td>@Model.Usuario.Nombre</td>
+                </tr>
+                <tr>
+                    <td>Apellidos</td>
+                    <td>@Model.Usuario.Apellidos</td>
+                </tr>
+                <tr>
+                    <td>Correo</td>
+                    <td>@Model.Usuario.Correo</td>
+                </tr>
+                <tr>
+                    <td>Celular</td>
+                    <td>@Model.Usuario.Celular</td>
+                </tr>
+                <tr>
+                    <td>Telefono</td>
+                    <td>@Model.Usuario.Telefono</td>
+                </tr>
+                <tr>
+                    <td>Dirección</td>
+                    <td>@Model.Usuario.Direccion</td>
+                </tr>
+                <tr>
+                    <td>Municipio</td>
+                    <td>@Model.Usuario.Municipio.Nombre</td>
+                </tr>
+                <tr>
+                    <td>Rol</td>
+                    <td>@Model.Usuario.Rol.Nombre</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
