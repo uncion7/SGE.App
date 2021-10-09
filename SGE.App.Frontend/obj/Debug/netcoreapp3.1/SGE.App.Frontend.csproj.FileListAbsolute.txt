@@ -82,6 +82,7 @@ C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Front
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\SGE.App.Dominio.pdb
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\DeptoEdit.cshtml.g.cs
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\DeptoDetail.cshtml.g.cs
+<<<<<<< HEAD
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MunicipioList.cshtml.g.cs
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MunicipioDetail.cshtml.g.cs
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MunicipioEdit.cshtml.g.cs
@@ -91,3 +92,92 @@ C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Front
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\RolDetail.cshtml.g.cs
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\RolEdit.cshtml.g.cs
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\RolList.cshtml.g.cs
+=======
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.csprojAssemblyReference.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.AssemblyInfoInputs.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.AssemblyInfo.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.csproj.CoreCompileInputs.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.MvcApplicationPartsAssemblyInfo.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.RazorAssemblyInfo.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.RazorAssemblyInfo.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.pdb
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.TagHelpers.input.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.TagHelpers.output.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.RazorCoreGenerate.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\CicloDetail.cshtml.g.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\CicloEdit.cshtml.g.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\CicloList.cshtml.g.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\DeptoDetail.cshtml.g.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\DeptoEdit.cshtml.g.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\DeptoList.cshtml.g.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.RazorTargetAssemblyInfo.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.RazorTargetAssemblyInfo.cs
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\SGE.App.Frontend.exe
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\SGE.App.Frontend.deps.json
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\SGE.App.Frontend.runtimeconfig.json
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\SGE.App.Frontend.runtimeconfig.dev.json
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\SGE.App.Frontend.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\SGE.App.Frontend.pdb
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\SGE.App.Frontend.Views.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\SGE.App.Frontend.Views.pdb
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\SGE.App.Dominio.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\SGE.App.Persistencia.dll
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\SGE.App.Persistencia.pdb
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\bin\Debug\netcoreapp3.1\SGE.App.Dominio.pdb
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.Views.pdb
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.csproj.CopyComplete
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\staticwebassets\SGE.App.Frontend.StaticWebAssets.Manifest.cache
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\staticwebassets\SGE.App.Frontend.StaticWebAssets.xml
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\SGE.App.Frontend.genruntimeconfig.cache
+>>>>>>> 287978502012ea057807ae83f5039db5fb6de68f

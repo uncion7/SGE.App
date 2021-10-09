@@ -28,8 +28,11 @@ namespace SGE.App.Frontend
             services.AddRazorPages();
             services.AddDbContext<SGE.App.Persistencia.AppContext>();
             services.AddScoped<IRepositorioDepartamento, RepositorioDepartamento>();
+<<<<<<< HEAD
             services.AddScoped<IRepositorioMunicipio, RepositorioMunicipio>();
             services.AddScoped<IRepositorioRol, RepositorioRol>();
+=======
+>>>>>>> 287978502012ea057807ae83f5039db5fb6de68f
             services.AddScoped<IRepositorioCiclo, RepositorioCiclo>();
         }
 
