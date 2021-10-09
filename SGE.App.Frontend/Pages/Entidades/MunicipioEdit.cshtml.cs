@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -16,7 +17,7 @@ namespace SGE.App.Frontend.Pages
         private readonly IRepositorioMunicipio repositorioMunicipio;
 
         public SelectList listaDepartamentos{get; set;}
-
+        
         [BindProperty]
         public int DeptoID {get; set;}
 
@@ -32,10 +33,12 @@ namespace SGE.App.Frontend.Pages
         public IActionResult OnGet(int? municipioId)
         {
             var listaDepartamentosDB = _appContext.Departamentos;
-            listaDepartamentos = new SelectList(listaDepartamentosDB, nameof(Departamento.Id), nameof(Departamento.Nombre));
+            listaDepartamentos = new SelectList(listaDepartamentosDB, nameof(Departamento.Id), nameof(Departamento.Nombre)); 
 
             if(municipioId.HasValue)
             {
+                var municipioQuery = _appContext.Municipios.Include(m => m.Departamento).FirstOrDefault(m => m.Id==municipioId);
+                DeptoID = municipioQuery.Departamento.Id;
                 Municipio = repositorioMunicipio.GetMunicipio(municipioId.Value);
             }
             else

@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using SGE.App.Dominio;
 
 namespace SGE.App.Persistencia
@@ -42,17 +44,17 @@ namespace SGE.App.Persistencia
 
         IEnumerable<Municipio> IRepositorioMunicipio.GetAllMunicipios()
         {
-            return _appContext.Municipios;
+            return _appContext.Municipios.Include(g=>g.Departamento);
         }
 
         Municipio IRepositorioMunicipio.GetMunicipio(int idMunicipio)
         {
-            return _appContext.Municipios.FirstOrDefault(m => m.Id==idMunicipio);
+            return _appContext.Municipios.Include(m => m.Departamento).FirstOrDefault(m => m.Id==idMunicipio);
         }
 
         Municipio IRepositorioMunicipio.UpdateMunicipio(Municipio municipio)
         {
-            var municipioEncontrado =_appContext.Municipios.FirstOrDefault(m => m.Id==municipio.Id);
+            var municipioEncontrado =_appContext.Municipios.Include(m => m.Departamento).FirstOrDefault(m => m.Id==municipio.Id);
             if(municipioEncontrado!=null)
             {
                 municipioEncontrado.Nombre = municipio.Nombre;

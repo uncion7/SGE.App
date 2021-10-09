@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using SGE.App.Dominio;
 
