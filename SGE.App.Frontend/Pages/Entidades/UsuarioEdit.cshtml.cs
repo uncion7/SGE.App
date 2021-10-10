@@ -27,7 +27,7 @@ namespace SGE.App.Frontend.Pages
 
         [BindProperty]
         public Usuario Usuario {get; set;}
-
+        
         public UsuarioEditModel(IRepositorioUsuario repositorioUsuario, SGE.App.Persistencia.AppContext appContext)
         {
             this.repositorioUsuario = repositorioUsuario;
