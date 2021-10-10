@@ -26,9 +26,36 @@ namespace SGE.App.Persistencia
             _appContext = appContext;
         }
 
+        public String miCodigo(string codigo, int valor)
+        {
+            var b = valor.ToString().Length;
+            string ceros;
+            if(b == 1)
+            {
+                ceros = "000";
+            }
+            else if(b == 2)
+            {
+                ceros = "00";
+            }
+            else if(b == 1)
+            {
+                ceros = "0";
+            }
+            else
+            {
+                ceros = "";
+            }
+            var res = codigo + "-" + ceros + valor;
+            return res;
+        }
+
         Usuario IRepositorioUsuario.AddUsuario(Usuario usuario)
         {
             var usuarioAdicionado =_appContext.Usuarios.Add(usuario);
+            _appContext.SaveChanges();
+            var miCode = miCodigo(usuarioAdicionado.Entity.Rol.Codigo, usuarioAdicionado.Entity.Id);
+            usuarioAdicionado.Entity.Codigo = miCode;
             _appContext.SaveChanges();
             return usuarioAdicionado.Entity;
         }
@@ -49,7 +76,8 @@ namespace SGE.App.Persistencia
 
         Usuario IRepositorioUsuario.GetUsuario(int idUsuario)
         {
-            return _appContext.Usuarios.Include(m => m.Municipio).Include(m => m.Rol).FirstOrDefault(m => m.Id==idUsuario);
+            var miUsuario = _appContext.Usuarios.Include(m => m.Municipio).Include(m => m.Rol).FirstOrDefault(m => m.Id==idUsuario);
+            return miUsuario;
         }
 
         Usuario IRepositorioUsuario.UpdateUsuario(Usuario usuario)

@@ -16,6 +16,7 @@ namespace SGE.App.Dominio
         public string Direccion {get; set;}
         public Municipio Municipio {get; set;}
         public Rol Rol {get; set;}
+        public string Codigo {get; set;}
     }
 }
 
