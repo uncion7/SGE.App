@@ -1,0 +1,34 @@
+﻿@page
+@model SGE.App.Frontend.Pages.HorarioEditModel
+@{
+}
+
+<h1>Horario:@Model.Horario.DiaSemana</h1>
+<form method="post" action="">
+    <input type="hidden" asp-for="Horario.Id">
+    <div class="form-group">
+        <label asp-for="Horario.DiaSemana"></label>
+        <input asp-for="Horario.DiaSemana" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Horario.HoraInicial"></label>
+        <input asp-for="Horario.HoraInicial" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Horario.HoraFinal"></label>
+        <input asp-for="Horario.HoraFinal" class="form-control">
+    </div>
+
+    <div class="col-12">
+        <nav class="navbar navbar-light bg-light">
+            <a asp-page="./HorarioList" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar">
+                <i class="fas fa-list-ul"></i>
+            </a>
+            <button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Guardar">
+                <i class="fas fa-save"></i>        
+            </button>
+        </div>
+    </div>
+</form>

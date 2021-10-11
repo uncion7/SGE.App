@@ -54,9 +54,15 @@ namespace SGE.App.Persistencia
         {
             var usuarioAdicionado =_appContext.Usuarios.Add(usuario);
             _appContext.SaveChanges();
-            var miCode = miCodigo(usuarioAdicionado.Entity.Rol.Codigo, usuarioAdicionado.Entity.Id);
-            usuarioAdicionado.Entity.Codigo = miCode;
-            _appContext.SaveChanges();
+            try{
+                var miCode = miCodigo(usuarioAdicionado.Entity.Rol.Codigo, usuarioAdicionado.Entity.Id);
+                //usuarioAdicionado.Entity.Codigo = miCode;
+                //_appContext.SaveChanges();
+            }
+            catch
+            {
+                //p
+            }
             return usuarioAdicionado.Entity;
         }
 

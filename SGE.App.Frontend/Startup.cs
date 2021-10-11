@@ -32,6 +32,7 @@ namespace SGE.App.Frontend
             services.AddScoped<IRepositorioRol, RepositorioRol>();
             services.AddScoped<IRepositorioCiclo, RepositorioCiclo>();
             services.AddScoped<IRepositorioUsuario, RepositorioUsuario>();
+            services.AddScoped<IRepositorioHorario, RepositorioHorario>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

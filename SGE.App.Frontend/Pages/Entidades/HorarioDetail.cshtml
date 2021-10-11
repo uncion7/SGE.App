@@ -1,0 +1,14 @@
+﻿@page
+@model SGE.App.Frontend.Pages.HorarioDetailModel
+@{
+}
+
+<h1>Horario</h1>
+<p>Id: @Model.Horario.Id</p>
+<p>Nombre: @Model.Horario.DiaSemana</p>
+<p>Hora Inicial: @Model.Horario.HoraInicial</p>
+<p>Hora Final: @Model.Horario.HoraFinal</p>
+
+<a asp-page="./HorarioList" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar">
+    <i class="fas fa-list-ul"></i>
+</a>
