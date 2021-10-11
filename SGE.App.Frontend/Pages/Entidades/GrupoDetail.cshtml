@@ -1,13 +1,13 @@
 ﻿@page
-@model SGE.App.Frontend.Pages.MunicipioDetailModel
+@model SGE.App.Frontend.Pages.GrupoDetailModel
 @{
 }
 <div class="row">
     <div class="col-10">
-        <h1>Municipio:@Model.Municipio.Nombre</h1>
+        <h1>Grupo:@Model.Grupo.Nombre</h1>
     </div>
     <div class="col-2 text-right">
-        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./MunicipioList">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./GrupoList">
             <i class="fas fa-list-ul"></i>
         </a>
     </div>
@@ -18,18 +18,13 @@
             <tbody>
                 <tr>
                     <td>Id</td>
-                    <td>@Model.Municipio.Id</td>
+                    <td>@Model.Grupo.Id</td>
                 </tr>
                 <tr>
                     <td>Nombre</td>
-                    <td>@Model.Municipio.Nombre</td>
-                </tr>
-                <tr>
-                    <td>Departamento</td>
-                    <td>@Model.Municipio.Departamento.Nombre</td>
+                    <td>@Model.Grupo.Nombre</td>
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
-

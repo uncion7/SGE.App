@@ -1,0 +1,32 @@
+﻿@page
+@model SGE.App.Frontend.Pages.GrupoEditModel
+@{
+}
+<div class="row">
+    <div class="col-10">
+        <h1>Grupo</h1>
+    </div>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./GrupoList">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+</div>
+<form method="post" action="">
+    <input type="hidden" asp-for="Grupo.Id">
+    <div class="form-group">
+        <label asp-for="Grupo.Nombre"></label>
+        <input asp-for="Grupo.Nombre" class="form-control">
+        <span asp-validation-for="Grupo.Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Grupo.Ciclo"></label>
+        <select asp-for="CicloID" name="CicloID" class="form-control" asp-items="Model.listaCiclos">
+            <option>--- Seleccione un Ciclo ---</option>
+        </select>
+        <span asp-validation-for="Grupo.Ciclo" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" data-toggle="tooltip" data-placement="top" title="Guardar">
+        <i class="fas fa-2x fa-save"></i>        
+    </button>
+</form>
