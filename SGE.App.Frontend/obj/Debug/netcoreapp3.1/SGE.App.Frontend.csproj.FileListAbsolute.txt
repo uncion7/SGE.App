@@ -184,11 +184,9 @@ D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\S
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\UsuarioDetail.cshtml.g.cs
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\UsuarioEdit.cshtml.g.cs
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\UsuarioList.cshtml.g.cs
-<<<<<<< HEAD
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\GrupoDetail.cshtml.g.cs
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\GrupoEdit.cshtml.g.cs
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\GrupoList.cshtml.g.cs
-=======
 D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MunicipioDetail.cshtml.g.cs
 D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MunicipioEdit.cshtml.g.cs
 D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MunicipioList.cshtml.g.cs

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Persistencia\\SGE.App.Persistencia.csproj": {}
+    "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Persistencia\\SGE.App.Persistencia.csproj": {}
   },
   "projects": {
-    "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj": {
+    "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj",
         "projectName": "SGE.App.Dominio",
-        "projectPath": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj",
-        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj",
+        "packagesPath": "C:\\Users\\mcordoba\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\mcordoba\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -57,17 +57,17 @@
         }
       }
     },
-    "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Persistencia\\SGE.App.Persistencia.csproj": {
+    "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Persistencia\\SGE.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Persistencia\\SGE.App.Persistencia.csproj",
+        "projectUniqueName": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Persistencia\\SGE.App.Persistencia.csproj",
         "projectName": "SGE.App.Persistencia",
-        "projectPath": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Persistencia\\SGE.App.Persistencia.csproj",
-        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Persistencia\\obj\\",
+        "projectPath": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Persistencia\\SGE.App.Persistencia.csproj",
+        "packagesPath": "C:\\Users\\mcordoba\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\mcordoba\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -78,8 +78,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj": {
-                "projectPath": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj"
+              "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj": {
+                "projectPath": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj"
               }
             }
           }
