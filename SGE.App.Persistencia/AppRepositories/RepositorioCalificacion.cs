@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using SGE.App.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace SGE.App.Persistencia
 {
@@ -28,12 +30,13 @@ namespace SGE.App.Persistencia
         {
             var calificacionAdicionada =_appContext.Calificaciones.Add(calificacion);
             _appContext.SaveChanges();
+            
             return calificacionAdicionada.Entity;
         }
 
         void IRepositorioCalificacion.DeleteCalificacion(int idCalificacion)
         {
-            var calificacionEncontrada = _appContext.Calificaciones.FirstOrDefault(m => m.Id==idCalificacion);
+            var calificacionEncontrada = _appContext.Calificaciones.FirstOrDefault(g => g.Id==idCalificacion);
             if(calificacionEncontrada==null)
                 return;
             _appContext.Calificaciones.Remove(calificacionEncontrada);
@@ -42,17 +45,17 @@ namespace SGE.App.Persistencia
 
         IEnumerable<Calificacion> IRepositorioCalificacion.GetAllCalificaciones()
         {
-            return _appContext.Calificaciones;
+            return _appContext.Calificaciones.Include(g => g.Grupo);
         }
 
         Calificacion IRepositorioCalificacion.GetCalificacion(int idCalificacion)
         {
-            return _appContext.Calificaciones.FirstOrDefault(m => m.Id==idCalificacion);
+            return _appContext.Calificaciones.Include(g => g.Grupo).FirstOrDefault(g => g.Id==idCalificacion);
         }
 
         Calificacion IRepositorioCalificacion.UpdateCalificacion(Calificacion calificacion)
         {
-            var calificacionEncontrada =_appContext.Calificaciones.FirstOrDefault(m => m.Id==calificacion.Id);
+            var calificacionEncontrada =_appContext.Calificaciones.Include(m => m.Grupo).FirstOrDefault(m => m.Id==calificacion.Id);
             if(calificacionEncontrada!=null)
             {
                 calificacionEncontrada.Nombre = calificacion.Nombre;

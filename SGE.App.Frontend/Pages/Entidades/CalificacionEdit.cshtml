@@ -1,0 +1,37 @@
+﻿@page
+@model SGE.App.Frontend.Pages.CalificacionEditModel
+@{
+}
+
+<h1>Calificacion:@Model.Calificacion.Nombre</h1>
+<form method="post" action="">
+    <input type="hidden" asp-for="Calificacion.Id">
+    <div class="form-group">
+        <label asp-for="Calificacion.Nombre"></label>
+        <input asp-for="Calificacion.Nombre" class="form-control">
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Calificacion.Grupo"></label>
+        <select asp-for="GrupoId" name="GrupoId" class="form-control" asp-items="Model.listaGrupos">
+            <option>--- Seleccione un Grupo ---</option>
+        </select>
+        <span asp-validation-for="Calificacion.Grupo" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Calificacion.VrPonderado"></label>
+        <input asp-for="Calificacion.VrPonderado" class="form-control">
+    </div>
+    
+    <div class="col-12">
+        <nav class="navbar navbar-light bg-light">
+            <a asp-page="./CalificacionList" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar">
+                <i class="fas fa-list-ul"></i>
+            </a>
+            <button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Guardar">
+                <i class="fas fa-save"></i>        
+            </button>
+        </div>
+    </div>
+</form>

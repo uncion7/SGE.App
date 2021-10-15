@@ -1,0 +1,39 @@
+﻿@page
+@model SGE.App.Frontend.Pages.CalificacionDetailModel
+@{
+}
+
+<div class="row">
+    <div class="col-10">
+        <h1>Usuario:@Model.Calificacion.Nombre</h1>
+    </div>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./CalificacionList">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+</div>
+<div class=row>
+    <div class=col-4>
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td>@Model.Calificacion.Id</td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td>@Model.Calificacion.Nombre</td>
+                </tr>
+                                <tr>
+                    <td>Grupo</td>
+                    <td>@Model.Calificacion.Grupo.Nombre</td>
+                </tr>
+                <tr>
+                    <td>Valor Ponderado</td>
+                    <td>@Model.Calificacion.VrPonderado</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
