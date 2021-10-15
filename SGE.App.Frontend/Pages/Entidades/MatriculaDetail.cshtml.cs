@@ -9,21 +9,26 @@ using SGE.App.Dominio;
 
 namespace SGE.App.Frontend.Pages
 {
-    public class MatriculaListModel : PageModel
+    public class MatriculaDetailModel : PageModel
     {
         private readonly IRepositorioMatricula repositorioMatricula;
-        public IEnumerable<Matricula> Matriculas{get;set;}
-        public MatriculaListModel(IRepositorioMatricula repositorioMatricula)
+        public Matricula Matricula {get;set;}
+        public MatriculaDetailModel(IRepositorioMatricula repositorioMatricula)
         {
             this.repositorioMatricula = repositorioMatricula;
         }
-        public void OnGet(int? matriculaId)
+
+
+        public IActionResult OnGet(int matriculaId)
         {
-            if(matriculaId>0)
+            Matricula = repositorioMatricula.GetMatricula(matriculaId);
+            if(Matricula == null)
             {
-                repositorioMatricula.DeleteMatricula(matriculaId.Value);
+                return RedirectToPage("./NotFound");
             }
-            Matriculas = repositorioMatricula.GetAllMatriculas();
+            else
+            return Page();
+
         }
     }
 }

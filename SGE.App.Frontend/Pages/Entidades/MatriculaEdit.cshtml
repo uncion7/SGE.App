@@ -1,0 +1,35 @@
+﻿@page
+@model SGE.App.Frontend.Pages.MatriculaEditModel
+@{
+}
+
+<div class="row">
+    <div class="col-10">
+        <h1>Matricula:@Model.Matricula.Estudiante</h1>
+    </div>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./MatriculaList">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+</div>
+<form method="post" action="">
+    <input type="hidden" asp-for="Matricula.Id">
+    <div class="form-group">
+        <label asp-for="Matricula.Estudiante"></label>
+        <select asp-for="EstudianteId" name="EstudianteId" class="form-control" asp-items="Model.listaEstudiantes">
+            <option>--- Seleccione un Estudiante ---</option>
+        </select>
+        <span asp-validation-for="Matricula.Estudiante" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Matricula.Grupo"></label>
+        <select asp-for="GrupoId" name="GrupoId" class="form-control" asp-items="Model.listaGrupos">
+            <option>--- Seleccione un Grupo ---</option>
+        </select>
+        <span asp-validation-for="Matricula.Grupo" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" data-toggle="tooltip" data-placement="top" title="Guardar">
+        <i class="fas fa-2x fa-save"></i>        
+    </button>
+</form>

@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using SGE.App.Dominio;
 
-/*
+
 namespace SGE.App.Persistencia
 {
     public class RepositorioMatricula:IRepositorioMatricula
@@ -22,49 +22,48 @@ namespace SGE.App.Persistencia
         ///</sumary>
         ///<param name="appContext"></param>//
 
-        public RepositorioMunicipio(AppContext appContext)
+        public RepositorioMatricula(AppContext appContext)
         {
             _appContext = appContext;
         }
 
-        Municipio IRepositorioMunicipio.AddMunicipio(Municipio municipio)
+        Matricula IRepositorioMatricula.AddMatricula(Matricula matricula)
         {
-            var municipioAdicionado =_appContext.Municipios.Add(municipio);
+            var matriculaAdicionado =_appContext.Matricula.Add(matricula);
             _appContext.SaveChanges();
-            return municipioAdicionado.Entity;
+            return matriculaAdicionado.Entity;
         }
 
-        void IRepositorioMunicipio.DeleteMunicipio(int idMunicipio)
+        void IRepositorioMatricula.DeleteMatricula(int idMatricula)
         {
-            var municipioEncontrado = _appContext.Municipios.FirstOrDefault(m => m.Id==idMunicipio);
-            if(municipioEncontrado==null)
+            var matriculaEncontrado = _appContext.Matricula.FirstOrDefault(m => m.Id==idMatricula);
+            if(matriculaEncontrado==null)
                 return;
-            _appContext.Municipios.Remove(municipioEncontrado);
+            _appContext.Matricula.Remove(matriculaEncontrado);
             _appContext.SaveChanges();
         }
 
-        IEnumerable<Municipio> IRepositorioMunicipio.GetAllMunicipios()
+        IEnumerable<Matricula> IRepositorioMatricula.GetAllMatriculas()
         {
-            return _appContext.Municipios.Include(g=>g.Departamento);
+            return _appContext.Matricula.Include(g=>g.Grupo).Include(g=>g.Estudiante);;
         }
 
-        Municipio IRepositorioMunicipio.GetMunicipio(int idMunicipio)
+        Matricula IRepositorioMatricula.GetMatricula(int idMatricula)
         {
-            return _appContext.Municipios.Include(m => m.Departamento).FirstOrDefault(m => m.Id==idMunicipio);
+            return _appContext.Matricula.Include(g=>g.Grupo).Include(g=>g.Estudiante).FirstOrDefault(m => m.Id==idMatricula);
         }
 
-        Municipio IRepositorioMunicipio.UpdateMunicipio(Municipio municipio)
+        Matricula IRepositorioMatricula.UpdateMatricula(Matricula matricula)
         {
-            var municipioEncontrado =_appContext.Municipios.Include(m => m.Departamento).FirstOrDefault(m => m.Id==municipio.Id);
-            if(municipioEncontrado!=null)
+            var matriculaEncontrado =_appContext.Matricula.Include(g=>g.Grupo).Include(g=>g.Estudiante).FirstOrDefault(m => m.Id==matricula.Id);
+            if(matriculaEncontrado!=null)
             {
-                municipioEncontrado.Nombre = municipio.Nombre;
-                municipioEncontrado.Departamento = municipio.Departamento;
+                matriculaEncontrado.Grupo = matricula.Grupo;
+                matriculaEncontrado.Estudiante = matricula.Estudiante;
                 _appContext.SaveChanges();
             }
-            return municipioEncontrado;
+            return matriculaEncontrado;
         }
         
     }
 }
-*/

@@ -10,6 +10,7 @@ namespace SGE.App.Persistencia
         
         public DbSet<Departamento> Departamentos{get; set;}
         public DbSet<Municipio> Municipios{get; set;}
+        public DbSet<Matricula> Matricula{get; set;}
         public DbSet<Rol> Roles{get; set;}            
         public DbSet<Usuario> Usuarios{get; set;}
         public DbSet<Ciclo> Ciclos{get; set;}

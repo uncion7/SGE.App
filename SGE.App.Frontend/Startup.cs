@@ -29,6 +29,7 @@ namespace SGE.App.Frontend
             services.AddDbContext<SGE.App.Persistencia.AppContext>();
             services.AddScoped<IRepositorioDepartamento, RepositorioDepartamento>();
             services.AddScoped<IRepositorioMunicipio, RepositorioMunicipio>();
+            services.AddScoped<IRepositorioMatricula, RepositorioMatricula>();
             services.AddScoped<IRepositorioRol, RepositorioRol>();
             services.AddScoped<IRepositorioCiclo, RepositorioCiclo>();
             services.AddScoped<IRepositorioUsuario, RepositorioUsuario>();
