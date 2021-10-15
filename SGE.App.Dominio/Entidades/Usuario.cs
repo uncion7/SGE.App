@@ -7,6 +7,7 @@ namespace SGE.App.Dominio
     {
         public int Id {get; set;}
         public string Cedula {get; set;}
+        public string User {get; set;}
         public string Contrasena {get; set;}
         public string Nombre {get; set;}
         public string Apellidos {get; set;}
@@ -17,6 +18,7 @@ namespace SGE.App.Dominio
         public Municipio Municipio {get; set;}
         public Rol Rol {get; set;}
         public string Codigo {get; set;}
+        public bool Entro {get; set;}
     }
 }
 

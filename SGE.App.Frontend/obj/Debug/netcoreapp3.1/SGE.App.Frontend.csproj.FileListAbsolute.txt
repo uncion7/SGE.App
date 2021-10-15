@@ -201,3 +201,8 @@ D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\R
 D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\HorarioEdit.cshtml.g.cs
 D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Ingreso\Ingreso.cshtml.g.cs
 >>>>>>> eeffd46718e53378d50e8f89810b20f7e617de83
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\HorarioDetail.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\HorarioEdit.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\HorarioList.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Ingreso\Ingreso.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MatriculaList.cshtml.g.cs

@@ -134,6 +134,28 @@ namespace SGE.App.Persistencia.Migrations
                     b.ToTable("Horarios");
                 });
 
+            modelBuilder.Entity("SGE.App.Dominio.Matricula", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("EstudianteId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("GrupoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EstudianteId");
+
+                    b.HasIndex("GrupoId");
+
+                    b.ToTable("Matricula");
+                });
+
             modelBuilder.Entity("SGE.App.Dominio.Municipio", b =>
                 {
                     b.Property<int>("Id")
@@ -225,8 +247,8 @@ namespace SGE.App.Persistencia.Migrations
                     b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("GrupoId")
-                        .HasColumnType("int");
+                    b.Property<bool>("Entro")
+                        .HasColumnType("bit");
 
                     b.Property<int?>("MunicipioId")
                         .HasColumnType("int");
@@ -240,9 +262,10 @@ namespace SGE.App.Persistencia.Migrations
                     b.Property<string>("Telefono")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.Property<string>("User")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("GrupoId");
+                    b.HasKey("Id");
 
                     b.HasIndex("MunicipioId");
 
@@ -283,9 +306,26 @@ namespace SGE.App.Persistencia.Migrations
 
             modelBuilder.Entity("SGE.App.Dominio.Horario", b =>
                 {
-                    b.HasOne("SGE.App.Dominio.Grupo", null)
-                        .WithMany("Horarios")
+                    b.HasOne("SGE.App.Dominio.Grupo", "Grupo")
+                        .WithMany()
                         .HasForeignKey("GrupoId");
+
+                    b.Navigation("Grupo");
+                });
+
+            modelBuilder.Entity("SGE.App.Dominio.Matricula", b =>
+                {
+                    b.HasOne("SGE.App.Dominio.Usuario", "Estudiante")
+                        .WithMany()
+                        .HasForeignKey("EstudianteId");
+
+                    b.HasOne("SGE.App.Dominio.Grupo", "Grupo")
+                        .WithMany()
+                        .HasForeignKey("GrupoId");
+
+                    b.Navigation("Estudiante");
+
+                    b.Navigation("Grupo");
                 });
 
             modelBuilder.Entity("SGE.App.Dominio.Municipio", b =>
@@ -303,7 +343,7 @@ namespace SGE.App.Persistencia.Migrations
                         .WithMany()
                         .HasForeignKey("CalificacionId");
 
-                    b.HasOne("SGE.App.Dominio.Usuario", "Estudiante")
+                    b.HasOne("SGE.App.Dominio.Matricula", "Estudiante")
                         .WithMany()
                         .HasForeignKey("EstudianteId");
 
@@ -314,10 +354,6 @@ namespace SGE.App.Persistencia.Migrations
 
             modelBuilder.Entity("SGE.App.Dominio.Usuario", b =>
                 {
-                    b.HasOne("SGE.App.Dominio.Grupo", null)
-                        .WithMany("Estudiantes")
-                        .HasForeignKey("GrupoId");
-
                     b.HasOne("SGE.App.Dominio.Municipio", "Municipio")
                         .WithMany()
                         .HasForeignKey("MunicipioId");
@@ -329,13 +365,6 @@ namespace SGE.App.Persistencia.Migrations
                     b.Navigation("Municipio");
 
                     b.Navigation("Rol");
-                });
-
-            modelBuilder.Entity("SGE.App.Dominio.Grupo", b =>
-                {
-                    b.Navigation("Estudiantes");
-
-                    b.Navigation("Horarios");
                 });
 #pragma warning restore 612, 618
         }
