@@ -207,3 +207,10 @@ D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\R
 D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\GrupoDetail.cshtml.g.cs
 D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\GrupoEdit.cshtml.g.cs
 D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\GrupoList.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\HorarioDetail.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\HorarioEdit.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\HorarioList.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Ingreso\Ingreso.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MatriculaList.cshtml.g.cs
+>>>>>>> 54f6817bb7317ca9dd3918fbda6e5a9977f89397
+D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MatriculaList.cshtml.g.cs

@@ -59,9 +59,7 @@ namespace SGE.App.Persistencia
                 grupoEncontrado.Codigo = grupo.Codigo;
                 grupoEncontrado.Ciclo = grupo.Ciclo;
                 grupoEncontrado.Formador = grupo.Formador;
-                grupoEncontrado.Horarios = grupo.Horarios;
                 grupoEncontrado.Tutor = grupo.Tutor;
-                grupoEncontrado.Estudiantes = grupo.Estudiantes;
                 _appContext.SaveChanges();
             }
             return grupoEncontrado;

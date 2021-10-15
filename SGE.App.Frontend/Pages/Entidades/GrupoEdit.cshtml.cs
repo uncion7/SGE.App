@@ -17,9 +17,13 @@ namespace SGE.App.Frontend.Pages
         private readonly IRepositorioGrupo repositorioGrupo;
 
         public SelectList listaCiclos{get; set;}
+        public SelectList listaFormadores{get; set;}
+        public SelectList listaTutores{get; set;}
         
         [BindProperty]
         public int CicloID {get; set;}
+        public int FormadorID {get; set;}
+        public int TutorID {get; set;}
 
         [BindProperty]
         public Grupo Grupo {get; set;}
@@ -35,10 +39,18 @@ namespace SGE.App.Frontend.Pages
             var listaCiclosDB = _appContext.Ciclos;
             listaCiclos = new SelectList(listaCiclosDB, nameof(Ciclo.Id), nameof(Ciclo.Nombre)); 
 
+            var listaFormadoresDB = _appContext.Usuarios.Where(p => p.Rol.Nombre == "Formador");
+            listaFormadores = new SelectList(listaFormadoresDB, nameof(Usuario.Id), nameof(Usuario.Nombre));
+
+            var listaTutoresDB = _appContext.Usuarios.Where(p => p.Rol.Nombre == "Tutor");
+            listaTutores = new SelectList(listaTutoresDB, nameof(Usuario.Id), nameof(Usuario.Nombre));
+
             if(grupoId.HasValue)
             {
-                var grupoQuery = _appContext.Grupos.Include(m => m.Ciclo).FirstOrDefault(m => m.Id==grupoId);
+                var grupoQuery = _appContext.Grupos.Include(m => m.Ciclo).Include(m => m.Formador).Include(m => m.Tutor).FirstOrDefault(m => m.Id==grupoId);
                 CicloID = grupoQuery.Ciclo.Id;
+                FormadorID = grupoQuery.Formador.Id;
+                TutorID = grupoQuery.Tutor.Id;
                 Grupo = repositorioGrupo.GetGrupo(grupoId.Value);
             }
             else
@@ -66,6 +78,16 @@ namespace SGE.App.Frontend.Pages
             listaCiclos = new SelectList(listaCiclosDB, nameof(Ciclo.Id), nameof(Ciclo.Nombre));
             Ciclo ciclo = _appContext.Ciclos.FirstOrDefault(d => d.Id == CicloID);
             Grupo.Ciclo = ciclo; 
+            
+            var listaFormadoresDB = _appContext.Usuarios.Where(p => p.Rol.Nombre == "Formador");
+            listaFormadores = new SelectList(listaFormadoresDB, nameof(Usuario.Id), nameof(Usuario.Nombre));         
+            Usuario formador = _appContext.Usuarios.FirstOrDefault(d => d.Id == FormadorID);
+            Grupo.Formador = formador; 
+                                    
+            var listaTutoresDB = _appContext.Usuarios.Where(p => p.Rol.Nombre == "Tutor");
+            listaTutores = new SelectList(listaTutoresDB, nameof(Usuario.Id), nameof(Usuario.Nombre));         
+            Usuario tutor = _appContext.Usuarios.FirstOrDefault(d => d.Id == TutorID);
+            Grupo.Tutor = tutor; 
             
             if(Grupo.Id > 0)
             {

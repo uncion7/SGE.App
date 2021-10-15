@@ -7,6 +7,6 @@ namespace SGE.App.Dominio
         public int Id{get; set;}
         public float Valor{get; set;}
         public Calificacion Calificacion{get; set;}
-        public Usuario Estudiante{get; set;}
+        public Matricula Estudiante{get; set;}
     }
 }

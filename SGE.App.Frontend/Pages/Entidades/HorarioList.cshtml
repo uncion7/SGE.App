@@ -17,6 +17,7 @@
     <thead class="table-dark">
         <tr>
             <th>Id</th>
+            <th>Grupo</th>
             <th>Dia Semana</th>
             <th>Acciones</th>
         </tr>
@@ -26,6 +27,7 @@
         {
             <tr>
                 <td>@h.Id</td>
+                <td>@h.Grupo.Nombre</td>
                 <td>@h.DiaSemana</td>
                 <td>
                     <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Ver" asp-page="./HorarioDetail" asp-route-horarioId="@h.Id">

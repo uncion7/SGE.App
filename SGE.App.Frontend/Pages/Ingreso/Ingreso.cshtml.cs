@@ -10,7 +10,8 @@ namespace SGE.App.Frontend.Pages
 {
     public class IngresoModel : PageModel
     {
-        private readonly SGE.App.Persistencia.AppContext _appContext;
+        
+        //private readonly SGE.App.Persistencia.AppContext _appContext;
 
         [BindProperty]
         public string Usuario {get;set;}
@@ -27,16 +28,16 @@ namespace SGE.App.Frontend.Pages
 
         public void OnPost()
         {
-            var p = _appContext.Usuario.Where( p => p.Usuario == Usuario);
-            if(p != null && p.password == Password )
-            {
-                return RedirectToPage("./Index");
-            }
+            //var p = _appContext.Usuario.Where( p => p.Usuario == Usuario);
+            //if(p != null && p.password == Password )
+            //{
+            //    return RedirectToPage("./Index");
+            //}
             
-            else
-            {
-                Mensaje = "La contraseña no es valida."
-            }
+            //else
+            //{
+            //    Mensaje = "La contraseña no es valida."
+            //}
 
         }
 

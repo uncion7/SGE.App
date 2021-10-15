@@ -3,12 +3,41 @@
 @{
 }
 
-<h1>Horario</h1>
-<p>Id: @Model.Horario.Id</p>
-<p>Nombre: @Model.Horario.DiaSemana</p>
-<p>Hora Inicial: @Model.Horario.HoraInicial</p>
-<p>Hora Final: @Model.Horario.HoraFinal</p>
-
-<a asp-page="./HorarioList" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar">
-    <i class="fas fa-list-ul"></i>
-</a>
+<div class="row">
+    <div class="col-10">
+        <h1>Hoario:@Model.Horario.DiaSemana</h1>
+    </div>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./HorarioList">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+</div>
+<div class=row>
+    <div class=col-4>
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td>@Model.Horario.Id</td>
+                </tr>
+                <tr>
+                    <td>Grupo</td>
+                    <td>@Model.Horario.Grupo.Nombre</td>
+                </tr>
+                <tr>
+                    <td>Dia de la Semana</td>
+                    <td>@Model.Horario.DiaSemana</td>
+                </tr>
+                <tr>
+                    <td>Hora Inicial</td>
+                    <td>@Model.Horario.HoraInicial</td>
+                </tr>
+                <tr>
+                    <td>Hora Final</td>
+                    <td>@Model.Horario.HoraFinal</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

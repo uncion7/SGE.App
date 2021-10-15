@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SGE.App.Persistencia;
 
 namespace SGE.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20211015024317_SinEstudiante")]
+    partial class SinEstudiante
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -306,11 +308,9 @@ namespace SGE.App.Persistencia.Migrations
 
             modelBuilder.Entity("SGE.App.Dominio.Horario", b =>
                 {
-                    b.HasOne("SGE.App.Dominio.Grupo", "Grupo")
-                        .WithMany()
+                    b.HasOne("SGE.App.Dominio.Grupo", null)
+                        .WithMany("Horarios")
                         .HasForeignKey("GrupoId");
-
-                    b.Navigation("Grupo");
                 });
 
             modelBuilder.Entity("SGE.App.Dominio.Matricula", b =>
@@ -365,6 +365,11 @@ namespace SGE.App.Persistencia.Migrations
                     b.Navigation("Municipio");
 
                     b.Navigation("Rol");
+                });
+
+            modelBuilder.Entity("SGE.App.Dominio.Grupo", b =>
+                {
+                    b.Navigation("Horarios");
                 });
 #pragma warning restore 612, 618
         }

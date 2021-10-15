@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using SGE.App.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace SGE.App.Persistencia
 {
@@ -42,19 +43,20 @@ namespace SGE.App.Persistencia
 
         IEnumerable<Horario> IRepositorioHorario.GetAllHorarios()
         {
-            return _appContext.Horarios;
+            return _appContext.Horarios.Include(a => a.Grupo);
         }
 
         Horario IRepositorioHorario.GetHorario(int idHorario)
         {
-            return _appContext.Horarios.FirstOrDefault(m => m.Id==idHorario);
+            return _appContext.Horarios.Include(a => a.Grupo).FirstOrDefault(m => m.Id==idHorario);
         }
 
         Horario IRepositorioHorario.UpdateHorario(Horario horario)
         {
-            var horarioEncontrado =_appContext.Horarios.FirstOrDefault(m => m.Id==horario.Id);
+            var horarioEncontrado =_appContext.Horarios.Include(a => a.Grupo).FirstOrDefault(m => m.Id==horario.Id);
             if(horarioEncontrado!=null)
             {
+                horarioEncontrado.Grupo = horario.Grupo;
                 horarioEncontrado.DiaSemana = horario.DiaSemana;
                 horarioEncontrado.HoraInicial = horario.HoraInicial;
                 horarioEncontrado.HoraFinal = horario.HoraFinal;

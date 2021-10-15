@@ -16,8 +16,11 @@ namespace SGE.App.Frontend.Pages
         private readonly SGE.App.Persistencia.AppContext _appContext;
         private readonly IRepositorioCalificacion repositorioCalificacion;
         public SelectList listaGrupos {get; set;}
+
         [BindProperty]
         public int GrupoId {get; set;}
+
+        [BindProperty]
         public Calificacion Calificacion {get;set;}
         
         public CalificacionEditModel(IRepositorioCalificacion repositorioCalificacion, SGE.App.Persistencia.AppContext appContext)
@@ -30,6 +33,7 @@ namespace SGE.App.Frontend.Pages
         {
             var listaGruposDb = _appContext.Grupos;
             listaGrupos = new SelectList(listaGruposDb, nameof(Grupo.Id), nameof(Grupo.Nombre));
+            
             if(calificacionId.HasValue)
             {
                 var grupoQuery = _appContext.Calificaciones.Include(g => g.Grupo).FirstOrDefault(g => g.Id==calificacionId);
