@@ -2,3 +2,69 @@
 @model SGE.App.Frontend.Pages.NotaListModel
 @{
 }
+
+<div class="row">
+    <div class="col-10">
+        <h1>Nota</h1>
+    </div>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Crear" asp-page="./NotaEdit">
+            <i class="fas fa-plus"></i>
+        </a>
+    </div>
+</div>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Calificacion</th>
+            <th>Estudiante</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var h in Model.Notas)
+        {
+            <tr>
+                <td>@h.Id</td>
+                <td>@h.Calificacion.Nombre</td>
+                <td>@h.Estudiante</td>
+                <td>
+                    <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Ver" asp-page="./NotaDetail" asp-route-notaId="@h.Id">
+                        <i class="fas fa-eye"></i>
+                    </a>
+                    <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Editar" asp-page="./NotaEdit" asp-route-notaId="@h.Id">
+                        <i class="fas fa-edit" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-danger table-btn" data-toggle="modal" data-target="#m-@h.Id">
+                        <span data-toggle="tooltip" data-placement="top" title="Eliminar">
+                            <i class="fas fa-trash"></i>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <div class="modal fade" id="m-@h.Id" tabindex="-1" role="dialog" aria-labelledby="m-@h.Id" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="m-@h.Id">Confirmación</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Desea eliminar este registro: @h.Calificacion</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Eliminar" asp-page="./NotaList" asp-route-notaId="@h.Id">
+                                Eliminar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </tbody>
+</table>
+

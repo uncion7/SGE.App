@@ -74,6 +74,5 @@ namespace SGE.App.Frontend.Pages
             }
             return RedirectToPage("./HorarioList");
         }
-
     }
 }
