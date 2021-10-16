@@ -2,23 +2,24 @@
 @model SGE.App.Frontend.Pages.DeptoEditModel
 @{
 }
-
-<h1>Departamento:@Model.Departamento.Nombre</h1>
+<div class="row">
+    <div class="col-10">
+        <h1>Departamento</h1>
+    </div>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./DepartamentoList">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+</div>
 <form method="post" action="">
     <input type="hidden" asp-for="Departamento.Id">
     <div class="form-group">
         <label asp-for="Departamento.Nombre"></label>
         <input asp-for="Departamento.Nombre" class="form-control">
+        <span asp-validation-for="Departamento.Nombre" class="text-danger"></span>
     </div>
-    <div class="col-12">
-        <nav class="navbar navbar-light bg-light">
-            <a asp-page="./DeptoList" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar">
-                <i class="fas fa-list-ul"></i>
-            </a>
-            <button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Guardar">
-                <i class="fas fa-save"></i>        
-            </button>
-        </div>
-    </div>
+    <button type="submit" class="btn btn-primary btn-block" data-toggle="tooltip" data-placement="top" title="Guardar">
+        <i class="fas fa-2x fa-save"></i>        
+    </button>
 </form>
-

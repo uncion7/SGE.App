@@ -47,7 +47,12 @@ namespace SGE.App.Frontend.Pages
 
             if(grupoId.HasValue)
             {
-                var grupoQuery = _appContext.Grupos.Include(m => m.Ciclo).Include(m => m.Formador).Include(m => m.Tutor).FirstOrDefault(m => m.Id==grupoId);
+                var grupoQuery = _appContext.Grupos
+                    .Include(m => m.Ciclo)
+                    .Include(m => m.Formador)
+                    .Include(m => m.Tutor)
+                    .FirstOrDefault(m => m.Id==grupoId);
+                
                 CicloID = grupoQuery.Ciclo.Id;
                 FormadorID = grupoQuery.Formador.Id;
                 TutorID = grupoQuery.Tutor.Id;
@@ -83,6 +88,11 @@ namespace SGE.App.Frontend.Pages
             listaFormadores = new SelectList(listaFormadoresDB, nameof(Usuario.Id), nameof(Usuario.Nombre));         
             Usuario formador = _appContext.Usuarios.FirstOrDefault(d => d.Id == FormadorID);
             Grupo.Formador = formador; 
+
+            Console.WriteLine("FormadorID");
+            Console.WriteLine(FormadorID);
+            Console.WriteLine("formador");
+            Console.WriteLine(formador);
                                     
             var listaTutoresDB = _appContext.Usuarios.Where(p => p.Rol.Nombre == "Tutor");
             listaTutores = new SelectList(listaTutoresDB, nameof(Usuario.Id), nameof(Usuario.Nombre));         

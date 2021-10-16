@@ -26,25 +26,44 @@ namespace SGE.App.Persistencia
             _appContext = appContext;
         }
 
-        public String miCodigo(string codigo, int valor)
+        public String miCodigoUsuario(string codigo, int valor)
         {
             var b = valor.ToString().Length;
             string ceros;
-            if(b == 1)
+            // Valida el rol
+            if(codigo == "E")
             {
-                ceros = "000";
-            }
-            else if(b == 2)
-            {
-                ceros = "00";
-            }
-            else if(b == 1)
-            {
-                ceros = "0";
+                if(b == 1)
+                {
+                    ceros = "000";
+                }
+                else if(b == 2)
+                {
+                    ceros = "00";
+                }
+                else if(b == 1)
+                {
+                    ceros = "0";
+                }
+                else
+                {
+                    ceros = "";
+                }
             }
             else
             {
-                ceros = "";
+                if(b == 1)
+                {
+                    ceros = "00";
+                }
+                else if(b == 2)
+                {
+                    ceros = "0";
+                }
+                else
+                {
+                    ceros = "";
+                }
             }
             var res = codigo + "-" + ceros + valor;
             return res;
@@ -53,16 +72,11 @@ namespace SGE.App.Persistencia
         Usuario IRepositorioUsuario.AddUsuario(Usuario usuario)
         {
             var usuarioAdicionado =_appContext.Usuarios.Add(usuario);
+            usuarioAdicionado.Entity.User = usuario.Cedula;
             _appContext.SaveChanges();
-            try{
-                var miCode = miCodigo(usuarioAdicionado.Entity.Rol.Codigo, usuarioAdicionado.Entity.Id);
-                //usuarioAdicionado.Entity.Codigo = miCode;
-                //_appContext.SaveChanges();
-            }
-            catch
-            {
-                //p
-            }
+            var miCode = miCodigoUsuario(usuarioAdicionado.Entity.Rol.Codigo, usuarioAdicionado.Entity.Id);
+            usuarioAdicionado.Entity.Codigo = miCode;
+            _appContext.SaveChanges();
             return usuarioAdicionado.Entity;
         }
 
@@ -77,7 +91,7 @@ namespace SGE.App.Persistencia
 
         IEnumerable<Usuario> IRepositorioUsuario.GetAllUsuarios()
         {
-            return _appContext.Usuarios.Include(g => g.Municipio).Include(g=>g.Rol);;
+            return _appContext.Usuarios.Include(g => g.Municipio).Include(g=>g.Rol);
         }
 
         Usuario IRepositorioUsuario.GetUsuario(int idUsuario)
@@ -91,7 +105,7 @@ namespace SGE.App.Persistencia
             var usuarioEncontrado =_appContext.Usuarios.Include(m => m.Municipio).Include(m => m.Rol).FirstOrDefault(m => m.Id==usuario.Id);
             if(usuarioEncontrado!=null)
             {
-                usuarioEncontrado.User = usuario.User;
+                usuarioEncontrado.User = usuario.Cedula;
                 usuarioEncontrado.Cedula = usuario.Cedula;
                 usuarioEncontrado.Nombre = usuario.Nombre;
                 usuarioEncontrado.Apellidos = usuario.Apellidos;

@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using SGE.App.Dominio;
 
@@ -24,9 +26,32 @@ namespace SGE.App.Persistencia
             _appContext = appContext;
         }
 
+        public string miCodigoGrupo(int valor)
+        {
+            var b = valor.ToString().Length;
+            string ceros;
+            if(b == 1)
+            {
+                ceros = "00";
+            }
+            else if(b == 2)
+            {
+                ceros = "0";
+            }
+            else
+            {
+                ceros = "";
+            }
+            var res = "G-" + ceros + valor;
+            return res;
+        }
+
         Grupo IRepositorioGrupo.AddGrupo(Grupo grupo)
         {
             var grupoAdicionado =_appContext.Grupos.Add(grupo);
+            _appContext.SaveChanges();
+            var miCodeG = miCodigoGrupo(grupoAdicionado.Entity.Id);
+            grupoAdicionado.Entity.Codigo = miCodeG;
             _appContext.SaveChanges();
             return grupoAdicionado.Entity;
         }
@@ -42,21 +67,32 @@ namespace SGE.App.Persistencia
 
         IEnumerable<Grupo> IRepositorioGrupo.GetAllGrupos()
         {
-            return _appContext.Grupos;
+            return _appContext.Grupos
+                .Include(m => m.Ciclo)
+                .Include(m => m.Formador)
+                .Include(m => m.Tutor);
         }
 
         Grupo IRepositorioGrupo.GetGrupo(int idGrupo)
         {
-            return _appContext.Grupos.FirstOrDefault(m => m.Id==idGrupo);
+            return _appContext.Grupos
+                .Include(m => m.Ciclo)
+                .Include(m => m.Formador)
+                .Include(m => m.Tutor)
+                .FirstOrDefault(m => m.Id==idGrupo);
         }
 
         Grupo IRepositorioGrupo.UpdateGrupo(Grupo grupo)
         {
-            var grupoEncontrado =_appContext.Grupos.FirstOrDefault(m => m.Id==grupo.Id);
+            var grupoEncontrado =_appContext.Grupos
+                .Include(m => m.Ciclo)
+                .Include(m => m.Formador)
+                .Include(m => m.Tutor)
+                .FirstOrDefault(m => m.Id==grupo.Id);
+            
             if(grupoEncontrado!=null)
             {
                 grupoEncontrado.Nombre = grupo.Nombre;
-                grupoEncontrado.Codigo = grupo.Codigo;
                 grupoEncontrado.Ciclo = grupo.Ciclo;
                 grupoEncontrado.Formador = grupo.Formador;
                 grupoEncontrado.Tutor = grupo.Tutor;
