@@ -39,10 +39,10 @@ namespace SGE.App.Frontend.Pages
         public IActionResult OnGet(int? matriculaId)
         {
 
-             var listaGruposDb = _appContext.Grupos;
+            var listaGruposDb = _appContext.Grupos;
             listaGrupos = new SelectList(listaGruposDb, nameof(Grupo.Id), nameof(Grupo.Nombre));
 
-             var listaEstudiantesDb = _appContext.Usuarios;
+            var listaEstudiantesDb = _appContext.Usuarios.Where(p => p.Rol.Nombre=="Estudiante");
             listaEstudiantes = new SelectList(listaEstudiantesDb, nameof(Usuario.Id), nameof(Usuario.Nombre), nameof(Usuario.Apellidos));
 
             if(matriculaId.HasValue)

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "VNcTCiLyluPaeZXCvIXunypXQaEdek10CIa/2k9mhQlb4O+wgbHgL3t3alxo7UN90ZS2oTL5Y6Ov04uOiTcrLA==",
+  "dgSpecHash": "5vzSSzQXKZOhzv5mnICMzF2o404hZKyjbFF42lzpLJ97b0soi7RyyRkrtsrDkHoBgymnNlQVl4Y+jAYXWW66wg==",
   "success": true,
-  "projectFilePath": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj",
+  "projectFilePath": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\USUARIO\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\mcordoba\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\mcordoba\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

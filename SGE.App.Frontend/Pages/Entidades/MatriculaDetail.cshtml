@@ -5,10 +5,10 @@
 
 <div class="row">
     <div class="col-10">
-        <h1>Matricula:@Model.Matricula.Estudiante.Nombre @Model.Matricula.Estudiante.Apellidos</h1>
+        <h1>Matricula</h1>
     </div>
     <div class="col-2 text-right">
-        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./MatricualaList">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./MatriculaList">
             <i class="fas fa-list-ul"></i>
         </a>
     </div>
@@ -22,16 +22,15 @@
                     <td>@Model.Matricula.Id</td>
                 </tr>
                 <tr>
-                    <td>Nombre Estudiante</td>
-                    <td>@Model.Matricula.Estudiante.Nombre</td>
-                </tr>
-                <tr>
-                    <td>Apellidos Estudiante</td>
-                    <td>@Model.Matricula.Estudiante.Apellidos</td>
-                </tr>
-                <tr>
                     <td>Grupo</td>
                     <td>@Model.Matricula.Grupo.Nombre</td>
+                </tr>
+                <tr>
+                    <td>Estudiante</td>
+                    <td>
+                        @Model.Matricula.Estudiante.Nombre
+                        @Model.Matricula.Estudiante.Apellidos
+                    </td>
                 </tr>
             </tbody>
         </table>

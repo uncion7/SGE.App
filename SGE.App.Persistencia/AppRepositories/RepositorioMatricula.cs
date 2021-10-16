@@ -45,7 +45,9 @@ namespace SGE.App.Persistencia
 
         IEnumerable<Matricula> IRepositorioMatricula.GetAllMatriculas()
         {
-            return _appContext.Matricula.Include(g=>g.Grupo).Include(g=>g.Estudiante);;
+            return _appContext.Matricula
+            .Include(g=>g.Grupo)
+            .Include(g=>g.Estudiante);
         }
 
         Matricula IRepositorioMatricula.GetMatricula(int idMatricula)

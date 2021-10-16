@@ -2,3 +2,37 @@
 @model SGE.App.Frontend.Pages.NotaDetailModel
 @{
 }
+<div class="row">
+    <div class="col-10">
+        <h1>Nota</h1>
+    </div>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./NotaList">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+</div>
+<div class=row>
+    <div class=col-4>
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td>@Model.Nota.Id</td>
+                </tr>
+                <tr>
+                    <td>Estudiante</td>
+                    <td>@Model.Nota.Estudiante.Nombre</td>
+                </tr>
+                <tr>
+                    <td>Calificación</td>
+                    <td>@Model.Nota.Calificacion.Nombre</td>
+                </tr>
+                <tr>
+                    <td>Valor</td>
+                    <td>@Model.Nota.Valor</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

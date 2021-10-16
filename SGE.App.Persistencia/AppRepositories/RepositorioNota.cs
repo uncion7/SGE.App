@@ -43,17 +43,20 @@ namespace SGE.App.Persistencia
 
         IEnumerable<Nota> IRepositorioNota.GetAllNotas()
         {
-            return _appContext.Notas.Include(m => m.Estudiante).Include(m => m.Calificacion);;
+            return _appContext.Notas.Include(m => m.Estudiante).Include(m => m.Calificacion);
         }
 
         Nota IRepositorioNota.GetNota(int idNota)
         {
-            return _appContext.Notas.Include(m => m.Estudiante).Include(m => m.Calificacion).FirstOrDefault(m => m.Id==idNota);
+            return _appContext.Notas
+                .Include(m=>m.Estudiante)
+                .Include(m=>m.Calificacion)
+                .FirstOrDefault(m => m.Id==idNota);
         }
 
         Nota IRepositorioNota.UpdateNota(Nota nota)
         {
-            var notaEncontrada =_appContext.Notas.Include(m=>m.Estudiante).Include(m=>m.Calificacion).FirstOrDefault(m => m.Id==nota.Id);
+            var notaEncontrada =_appContext.Notas.FirstOrDefault(m => m.Id==nota.Id);
             if(notaEncontrada!=null)
             {
                 notaEncontrada.Valor = nota.Valor;

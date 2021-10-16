@@ -91,8 +91,8 @@ namespace SGE.App.Persistencia
             var usuarioEncontrado =_appContext.Usuarios.Include(m => m.Municipio).Include(m => m.Rol).FirstOrDefault(m => m.Id==usuario.Id);
             if(usuarioEncontrado!=null)
             {
+                usuarioEncontrado.User = usuario.User;
                 usuarioEncontrado.Cedula = usuario.Cedula;
-                usuarioEncontrado.Contrasena = usuario.Contrasena;
                 usuarioEncontrado.Nombre = usuario.Nombre;
                 usuarioEncontrado.Apellidos = usuario.Apellidos;
                 usuarioEncontrado.Correo = usuario.Correo;
