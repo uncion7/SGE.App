@@ -21,6 +21,9 @@ namespace SGE.App.Frontend.Pages
         public int GrupoID {get;set;}
 
         [BindProperty]
+        public string DiaID {get; set;}
+
+        [BindProperty]
         public Horario Horario {get;set;}
         public HorarioEditModel(IRepositorioHorario repositorioHorario, SGE.App.Persistencia.AppContext appContext)
         {
@@ -38,6 +41,7 @@ namespace SGE.App.Frontend.Pages
                 var horarioQuery =_appContext.Horarios.Include(m => m.Grupo).FirstOrDefault(m => m.Id == horarioId);
                 GrupoID = horarioQuery.Grupo.Id;
                 Horario = repositorioHorario.GetHorario(horarioId.Value);
+                DiaID = horarioQuery.DiaSemana;
             }
             else
             {
@@ -63,6 +67,8 @@ namespace SGE.App.Frontend.Pages
             listaGrupos = new SelectList(listaGruposDb, nameof(Grupo.Id), nameof(Grupo.Nombre));
             Grupo grupo = _appContext.Grupos.FirstOrDefault(g => g.Id == GrupoID);
             Horario.Grupo = grupo;
+            Horario.DiaSemana = DiaID;
+
 
             if(Horario.Id > 0)
             {

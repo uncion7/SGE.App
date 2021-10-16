@@ -22,7 +22,9 @@ namespace SGE.App.Frontend.Pages
         
         [BindProperty]
         public int CicloID {get; set;}
+        [BindProperty]
         public int FormadorID {get; set;}
+        [BindProperty]
         public int TutorID {get; set;}
 
         [BindProperty]
@@ -88,11 +90,6 @@ namespace SGE.App.Frontend.Pages
             listaFormadores = new SelectList(listaFormadoresDB, nameof(Usuario.Id), nameof(Usuario.Nombre));         
             Usuario formador = _appContext.Usuarios.FirstOrDefault(d => d.Id == FormadorID);
             Grupo.Formador = formador; 
-
-            Console.WriteLine("FormadorID");
-            Console.WriteLine(FormadorID);
-            Console.WriteLine("formador");
-            Console.WriteLine(formador);
                                     
             var listaTutoresDB = _appContext.Usuarios.Where(p => p.Rol.Nombre == "Tutor");
             listaTutores = new SelectList(listaTutoresDB, nameof(Usuario.Id), nameof(Usuario.Nombre));         
