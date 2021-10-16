@@ -60,7 +60,7 @@ namespace SGE.App.Frontend.Pages
             {
                 Ciclo = repositorioCiclo.AddCiclo(Ciclo);
             }
-            return Page();
+            return RedirectToPage("./CicloList");
         }
 
     }
