@@ -2,16 +2,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Http;
 using SGE.App.Persistencia;
+using SGE.App.Dominio;
 
 namespace SGE.App.Frontend.Pages
 {
     public class IngresoModel : PageModel
     {
         
-        //private readonly SGE.App.Persistencia.AppContext _appContext;
+        private SGE.App.Persistencia.AppContext _appContext;
+        
 
         [BindProperty]
         public string Usuario {get;set;}
@@ -20,24 +25,37 @@ namespace SGE.App.Frontend.Pages
         public string Password{get;set;}
 
         [BindProperty]
-        public string Mensaje{get;set;}
+        public string MensajeUsuario{get;set;}
         
+        [BindProperty]
+        public string MensajePassword{get;set;}
+
         public void OnGet()
         {
         }
 
-        public void OnPost()
+        public IActionResult OnPost()
         {
-            //var p = _appContext.Usuario.Where( p => p.Usuario == Usuario);
-            //if(p != null && p.password == Password )
-            //{
-            //    return RedirectToPage("./Index");
-            //}
+            _appContext = new SGE.App.Persistencia.AppContext();
+
+            var p = _appContext.Usuarios.FirstOrDefault( p => p.User == Usuario);
+            if(p == null)
+            {
+                MensajeUsuario = "Usuario no existe";
+                //Console.WriteLine("User error");
+            }
             
-            //else
-            //{
-            //    Mensaje = "La contraseña no es valida."
-            //}
+            else if (!p.Contrasena.Equals(Password))
+            {
+                //Console.WriteLine("Contraseña incorrecta");
+                MensajePassword = "Contraseña incorrecta";
+            }
+            else
+            {
+            return RedirectToPage("../Index");
+            }
+
+            return Page();
 
         }
 

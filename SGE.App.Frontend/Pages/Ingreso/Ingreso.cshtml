@@ -9,11 +9,13 @@
         <form method="post" action="">
             <div class="form-group">
                 <label>Usuario</label>
-                <input class="form-control" type="text" asp-for="@Model.User"  placeholder="Ej: Alberto_Lozano">
+                <input class="form-control" type="text" asp-for="Usuario">
+                <span class = "text-danger">@Model.MensajeUsuario</span>
             </div>
             <div class="form-group">
                 <label>Contraseña</label>
-                <input class="form-control" type="password" asp-for="@Model.Password">
+                <input class="form-control" type="password" asp-for="Password">
+                <span class = "text-danger">@Model.MensajePassword</span>
             </div>
             <div class="form-group">
                 <input class= "btn btn-primary btn-block" type="submit" value="Ingresar">
