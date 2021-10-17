@@ -80,6 +80,9 @@ namespace SGE.App.Frontend.Pages
             Rol rolQuery = _appContext.Roles.FirstOrDefault(d => d.Id == RolID);
             Usuario.Rol = rolQuery; 
             
+            //Asignar la Contraseña inicial al Usuario
+            Usuario.Contrasena = Usuario.Cedula;
+
             if(Usuario.Id > 0)
             {
                 Usuario = repositorioUsuario.UpdateUsuario(Usuario);

@@ -21,7 +21,7 @@
         <select asp-for="GrupoID" name="GrupoID" class="form-control" asp-items="Model.listaGrupos">
             <option>--- Seleccione un Grupo ---</option>
         </select>
-        <span asp-validation-for="Horario.Grupo" class="text-danger"></span>
+        <span asp-validation-for="Horario.Grupo" class="text-danger">@Model.MsgGrupoLimite</span>
     </div>
     <div class="form-group">
         <label>Dia</label>
@@ -33,18 +33,19 @@
             <option value="Jueves">Jueves</option>
             <option value="Viernes">Viernes</option>
             <option value="Sñabado">Sábado</option>
-            <option value="Domingo">Domingo</option>
         </select>
     </div>
 
     <div class="form-group">
         <label asp-for="Horario.HoraInicial"></label>
         <input asp-for="Horario.HoraInicial" type="time" class="form-control">
+        <span asp-validation-for="Horario.HoraInicial" class="text-danger">@Model.MsgHorarioLimite</span>
     </div>
 
     <div class="form-group">
         <label asp-for="Horario.HoraFinal"></label>
         <input asp-for="Horario.HoraFinal" type="time" class="form-control">
+        <span asp-validation-for="Horario.HoraFinal" class="text-danger">@Model.MsgHorarioLimite</span>
     </div>
         <button type="submit" class="btn btn-primary btn btn-block" data-toggle="tooltip" data-placement="top" title="Guardar">
             <i class="fas fa-2x fa-save"></i>        
