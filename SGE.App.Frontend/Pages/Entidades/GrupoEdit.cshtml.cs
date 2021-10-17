@@ -30,6 +30,12 @@ namespace SGE.App.Frontend.Pages
         [BindProperty]
         public Grupo Grupo {get; set;}
 
+        [BindProperty]
+        public string MsgFormadorLimite {get; set;}
+
+        [BindProperty]
+        public string MsgTutorLimite {get; set;}
+
         public GrupoEditModel(IRepositorioGrupo repositorioGrupo, SGE.App.Persistencia.AppContext appContext)
         {
             this.repositorioGrupo = repositorioGrupo;
@@ -96,13 +102,44 @@ namespace SGE.App.Frontend.Pages
             Usuario tutor = _appContext.Usuarios.FirstOrDefault(d => d.Id == TutorID);
             Grupo.Tutor = tutor; 
             
+            //Validar formador maximo 3 grupos por ciclo
+            var formadorLimite = _appContext.Grupos
+                .Where(p => p.Ciclo == ciclo)
+                .Where(p => p.Formador == formador)
+                .Count();
+
+            //Validar tutor maximo 6 grupos por ciclo
+            var tutorLimite = _appContext.Grupos
+                .Where(p => p.Ciclo == ciclo)
+                .Where(p => p.Tutor == tutor)
+                .Count();
+            
             if(Grupo.Id > 0)
             {
                 Grupo = repositorioGrupo.UpdateGrupo(Grupo);
             }
             else
             {
-                Grupo = repositorioGrupo.AddGrupo(Grupo);
+                if(formadorLimite >= 3 && tutorLimite >= 6)
+                {
+                    MsgFormadorLimite = "El Formador ya tiene 3 Grupos asignados en este Ciclo";
+                    MsgTutorLimite = "El Tutor ya tiene 3 Grupos asignados en este Ciclo";
+                    return Page();
+                }
+                else if(formadorLimite >=3 && tutorLimite < 6)
+                {
+                    MsgFormadorLimite = "El Formador ya tiene 3 Grupos asignados en este Ciclo";
+                    return Page();
+                }
+                else if(formadorLimite < 3 && tutorLimite >= 6)
+                {
+                    MsgTutorLimite = "El Tutor ya tiene 3 Grupos asignados en este Ciclo";
+                    return Page();
+                }
+                else
+                {
+                    Grupo = repositorioGrupo.AddGrupo(Grupo);
+                }
             }
             return RedirectToPage("./GrupoList");
         }

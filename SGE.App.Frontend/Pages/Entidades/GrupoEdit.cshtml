@@ -31,14 +31,14 @@
         <select asp-for="FormadorID" name="FormadorID" class="form-control" asp-items="Model.listaFormadores">
             <option>--- Seleccione un Formador ---</option>
         </select>
-        <span asp-validation-for="Grupo.Formador" class="text-danger"></span>
+        <span asp-validation-for="Grupo.Formador" class="text-danger">@Model.MsgFormadorLimite</span>
     </div>
     <div class="form-group">
         <label asp-for="Grupo.Tutor"></label>
         <select asp-for="TutorID" name="TutorID" class="form-control" asp-items="Model.listaTutores">
             <option>--- Seleccione un Tutores ---</option>
         </select>
-        <span asp-validation-for="Grupo.Tutor" class="text-danger"></span>
+        <span asp-validation-for="Grupo.Tutor" class="text-danger">@Model.MsgTutorLimite</span>
     </div>
     <button type="submit" class="btn btn-primary btn-block" data-toggle="tooltip" data-placement="top" title="Guardar">
         <i class="fas fa-2x fa-save"></i>        
