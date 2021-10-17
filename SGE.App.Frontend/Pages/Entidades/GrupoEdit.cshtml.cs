@@ -22,11 +22,19 @@ namespace SGE.App.Frontend.Pages
         
         [BindProperty]
         public int CicloID {get; set;}
+        [BindProperty]
         public int FormadorID {get; set;}
+        [BindProperty]
         public int TutorID {get; set;}
 
         [BindProperty]
         public Grupo Grupo {get; set;}
+
+        [BindProperty]
+        public string MsgFormadorLimite {get; set;}
+
+        [BindProperty]
+        public string MsgTutorLimite {get; set;}
 
         public GrupoEditModel(IRepositorioGrupo repositorioGrupo, SGE.App.Persistencia.AppContext appContext)
         {
@@ -88,16 +96,23 @@ namespace SGE.App.Frontend.Pages
             listaFormadores = new SelectList(listaFormadoresDB, nameof(Usuario.Id), nameof(Usuario.Nombre));         
             Usuario formador = _appContext.Usuarios.FirstOrDefault(d => d.Id == FormadorID);
             Grupo.Formador = formador; 
-
-            Console.WriteLine("FormadorID");
-            Console.WriteLine(FormadorID);
-            Console.WriteLine("formador");
-            Console.WriteLine(formador);
                                     
             var listaTutoresDB = _appContext.Usuarios.Where(p => p.Rol.Nombre == "Tutor");
             listaTutores = new SelectList(listaTutoresDB, nameof(Usuario.Id), nameof(Usuario.Nombre));         
             Usuario tutor = _appContext.Usuarios.FirstOrDefault(d => d.Id == TutorID);
             Grupo.Tutor = tutor; 
+            
+            //Validar formador maximo 3 grupos por ciclo
+            var formadorLimite = _appContext.Grupos
+                .Where(p => p.Ciclo == ciclo)
+                .Where(p => p.Formador == formador)
+                .Count();
+
+            //Validar tutor maximo 6 grupos por ciclo
+            var tutorLimite = _appContext.Grupos
+                .Where(p => p.Ciclo == ciclo)
+                .Where(p => p.Tutor == tutor)
+                .Count();
             
             if(Grupo.Id > 0)
             {
@@ -105,7 +120,26 @@ namespace SGE.App.Frontend.Pages
             }
             else
             {
-                Grupo = repositorioGrupo.AddGrupo(Grupo);
+                if(formadorLimite >= 3 && tutorLimite >= 6)
+                {
+                    MsgFormadorLimite = "El Formador ya tiene 3 Grupos asignados en este Ciclo";
+                    MsgTutorLimite = "El Tutor ya tiene 3 Grupos asignados en este Ciclo";
+                    return Page();
+                }
+                else if(formadorLimite >=3 && tutorLimite < 6)
+                {
+                    MsgFormadorLimite = "El Formador ya tiene 3 Grupos asignados en este Ciclo";
+                    return Page();
+                }
+                else if(formadorLimite < 3 && tutorLimite >= 6)
+                {
+                    MsgTutorLimite = "El Tutor ya tiene 3 Grupos asignados en este Ciclo";
+                    return Page();
+                }
+                else
+                {
+                    Grupo = repositorioGrupo.AddGrupo(Grupo);
+                }
             }
             return RedirectToPage("./GrupoList");
         }

@@ -30,6 +30,9 @@ namespace SGE.App.Frontend.Pages
         [BindProperty]
         public Matricula Matricula {get;set;}
 
+        [BindProperty]
+        public string MsgGrupoLimite {get; set;}
+
         public MatriculaEditModel(IRepositorioMatricula repositorioMatricula, SGE.App.Persistencia.AppContext appContext)
         {
             this.repositorioMatricula = repositorioMatricula;
@@ -62,8 +65,6 @@ namespace SGE.App.Frontend.Pages
             {
                 return RedirectToPage("./NotFound");
             }
-
-            else
             return Page();
 
         }
@@ -85,17 +86,28 @@ namespace SGE.App.Frontend.Pages
             Usuario estudiante = _appContext.Usuarios.FirstOrDefault(g => g.Id == EstudianteId);
             Matricula.Estudiante = estudiante;
 
+            //Validar limite de estudiante por grupo
+            var grupoLimite = _appContext.Matricula
+                .Where(p => p.Grupo.Id == GrupoId)
+                .Count();
+
             if(Matricula.Id > 0)
             {
                 Matricula = repositorioMatricula.UpdateMatricula(Matricula);
             }
             else
             {
-                Matricula = repositorioMatricula.AddMatricula(Matricula);
+                if (grupoLimite >= 50)
+                {
+                    MsgGrupoLimite = "Este Grupo ya tiene 50 Estudiantes inscritos";
+                    return Page();
+                }
+                else
+                {
+                    Matricula = repositorioMatricula.AddMatricula(Matricula);
+                }
             }
-
             return RedirectToPage("./MatriculaList");
-
         }
 
     }

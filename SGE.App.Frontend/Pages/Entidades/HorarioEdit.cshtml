@@ -5,7 +5,7 @@
 
 <div class="row">
     <div class="col-10">
-        <h1>Horario:@Model.Horario.DiaSemana</h1>
+        <h1>Horario</h1>
     </div>
     <div class="col-2 text-right">
         <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./HorarioList">
@@ -21,22 +21,31 @@
         <select asp-for="GrupoID" name="GrupoID" class="form-control" asp-items="Model.listaGrupos">
             <option>--- Seleccione un Grupo ---</option>
         </select>
-        <span asp-validation-for="Horario.Grupo" class="text-danger"></span>
+        <span asp-validation-for="Horario.Grupo" class="text-danger">@Model.MsgGrupoLimite</span>
     </div>
-
     <div class="form-group">
-        <label asp-for="Horario.DiaSemana"></label>
-        <input asp-for="Horario.DiaSemana" class="form-control">
+        <label>Dia</label>
+        <select asp-for="DiaID" name="DiaID" class="form-control">
+            <option>--- Selecione un Día</option>
+            <option value="Lunes">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miercoles">Miercoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+            <option value="Sñabado">Sábado</option>
+        </select>
     </div>
 
     <div class="form-group">
         <label asp-for="Horario.HoraInicial"></label>
-        <input asp-for="Horario.HoraInicial" class="form-control">
+        <input asp-for="Horario.HoraInicial" type="time" class="form-control">
+        <span asp-validation-for="Horario.HoraInicial" class="text-danger">@Model.MsgHorarioLimite</span>
     </div>
 
     <div class="form-group">
         <label asp-for="Horario.HoraFinal"></label>
-        <input asp-for="Horario.HoraFinal" class="form-control">
+        <input asp-for="Horario.HoraFinal" type="time" class="form-control">
+        <span asp-validation-for="Horario.HoraFinal" class="text-danger">@Model.MsgHorarioLimite</span>
     </div>
         <button type="submit" class="btn btn-primary btn btn-block" data-toggle="tooltip" data-placement="top" title="Guardar">
             <i class="fas fa-2x fa-save"></i>        

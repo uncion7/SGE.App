@@ -5738,19 +5738,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\USUARIO\\.nuget\\packages\\": {}
+    "C:\\Users\\mcordoba\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Frontend\\SGE.App.Frontend.csproj",
+      "projectUniqueName": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Frontend\\SGE.App.Frontend.csproj",
       "projectName": "SGE.App.Frontend",
-      "projectPath": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Frontend\\SGE.App.Frontend.csproj",
-      "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Frontend\\obj\\",
+      "projectPath": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Frontend\\SGE.App.Frontend.csproj",
+      "packagesPath": "C:\\Users\\mcordoba\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Frontend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\mcordoba\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5761,11 +5761,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj": {
-              "projectPath": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj"
+            "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj": {
+              "projectPath": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Dominio\\SGE.App.Dominio.csproj"
             },
-            "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Persistencia\\SGE.App.Persistencia.csproj": {
-              "projectPath": "D:\\Mis Documentos\\Ucaldas\\DSR\\SGE.App\\SGE.App.Persistencia\\SGE.App.Persistencia.csproj"
+            "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Persistencia\\SGE.App.Persistencia.csproj": {
+              "projectPath": "C:\\Users\\mcordoba\\Documents\\UCALDAS\\CICLO3\\proyectos\\Educa\\SGE.App\\SGE.App.Persistencia\\SGE.App.Persistencia.csproj"
             }
           }
         }
