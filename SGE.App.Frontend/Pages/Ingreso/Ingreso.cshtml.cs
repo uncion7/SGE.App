@@ -50,6 +50,11 @@ namespace SGE.App.Frontend.Pages
                 //Console.WriteLine("Contraseña incorrecta");
                 MensajePassword = "Contraseña incorrecta";
             }
+            else if(p.Entro == false)
+            {
+                return RedirectToPage("./CambioContrasena");
+            }
+
             else
             {
             return RedirectToPage("../Index");
