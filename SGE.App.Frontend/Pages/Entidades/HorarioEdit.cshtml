@@ -21,7 +21,7 @@
         <select asp-for="GrupoID" name="GrupoID" class="form-control" asp-items="Model.listaGrupos">
             <option>--- Seleccione un Grupo ---</option>
         </select>
-        <span asp-validation-for="Horario.Grupo" class="text-danger">@Model.MsgGrupoLimite</span>
+        <span asp-validation-for="Horario.Grupo" class="text-danger">@Model.MsgIntensidad</span>
     </div>
     <div class="form-group">
         <label>Dia</label>
@@ -34,18 +34,24 @@
             <option value="Viernes">Viernes</option>
             <option value="Sñabado">Sábado</option>
         </select>
+        <span asp-validation-for="Horario.DiaSemana" class="text-danger">@Model.MsgDia</span>
+        <span asp-validation-for="Horario.DiaSemana" class="text-danger">@Model.MsgFormador</span>
     </div>
 
     <div class="form-group">
         <label asp-for="Horario.HoraInicial"></label>
         <input asp-for="Horario.HoraInicial" type="time" class="form-control">
-        <span asp-validation-for="Horario.HoraInicial" class="text-danger">@Model.MsgHorarioLimite</span>
+        <span asp-validation-for="Horario.HoraInicial" class="text-danger">@Model.MsgIntervalo</span>
+        <span asp-validation-for="Horario.HoraInicial" class="text-danger">@Model.MsgIntensidad</span>
+        <span asp-validation-for="Horario.HoraInicial" class="text-danger">@Model.MsgFormador</span>
     </div>
 
     <div class="form-group">
         <label asp-for="Horario.HoraFinal"></label>
         <input asp-for="Horario.HoraFinal" type="time" class="form-control">
-        <span asp-validation-for="Horario.HoraFinal" class="text-danger">@Model.MsgHorarioLimite</span>
+        <span asp-validation-for="Horario.HoraFinal" class="text-danger">@Model.MsgIntervalo</span>
+        <span asp-validation-for="Horario.HoraFinal" class="text-danger">@Model.MsgIntensidad</span>
+        <span asp-validation-for="Horario.HoraFinal" class="text-danger">@Model.MsgFormador</span>
     </div>
         <button type="submit" class="btn btn-primary btn btn-block" data-toggle="tooltip" data-placement="top" title="Guardar">
             <i class="fas fa-2x fa-save"></i>        
