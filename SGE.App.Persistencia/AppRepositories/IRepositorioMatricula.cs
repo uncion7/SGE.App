@@ -9,6 +9,8 @@ namespace SGE.App.Persistencia
         Matricula AddMatricula(Matricula matricula);
         Matricula UpdateMatricula(Matricula matricula);
         void DeleteMatricula(int idMatricula);
-        Matricula GetMatricula(int idMatricula); 
+        Matricula GetMatricula(int idMatricula);
+        IEnumerable<Matricula> GetAllMisGrupos(int usuarioId);
+        
     }
 }

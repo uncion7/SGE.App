@@ -1,0 +1,36 @@
+﻿@page
+@model SGE.App.Frontend.Pages.MisGruposModel
+@{
+}
+
+<div class="row">
+    <div class="col-10">
+        <h1>Mis Grupos</h1>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Ciclo</th>
+            <th>Grupo</th>
+            <th>Formador</th>
+            <th>Tutor</th>
+            <th>Estudiante</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var m in Model.MisGrupos)
+        {
+            <tr>
+                <td>@m.Grupo.Ciclo.Nombre</td>
+                <td>@m.Grupo.Nombre</td>
+                <td>@m.Grupo.Formador.Nombre @m.Grupo.Formador.Apellidos</td>
+                <td>@m.Grupo.Tutor.Nombre @m.Grupo.Tutor.Apellidos</td>
+                <td>@m.Estudiante.Nombre @m.Estudiante.Apellidos</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

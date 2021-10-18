@@ -13,11 +13,14 @@
         </a>
     </div>
 </div>
+
 <table class="table table-striped">
     <thead class="table-dark">
         <tr>
-            <th>Id</th>
-            <th>Estudiante</th>
+            <th>Ciclo</th>
+            <th>Grupo</th>
+            <th>Formador</th>
+            <th>Tutor</th>
             <th>Acciones</th>
         </tr>
     </thead>
@@ -25,8 +28,10 @@
         @foreach(var m in Model.Matriculas)
         {
             <tr>
-                <td>@m.Id</td>
-                <td>@m.Estudiante.Nombre</td>
+                <td>@m.Grupo.Ciclo.Nombre</td>
+                <td>@m.Grupo.Nombre</td>
+                <td>@m.Grupo.Formador.Nombre @m.Grupo.Formador.Apellidos</td>
+                <td>@m.Grupo.Tutor.Nombre @m.Grupo.Tutor.Apellidos</td>
                 <td>
                     <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Ver" asp-page="./MatriculaDetail" asp-route-matriculaId="@m.Id">
                         <i class="fas fa-eye"></i>
@@ -63,3 +68,4 @@
         }
     </tbody>
 </table>
+

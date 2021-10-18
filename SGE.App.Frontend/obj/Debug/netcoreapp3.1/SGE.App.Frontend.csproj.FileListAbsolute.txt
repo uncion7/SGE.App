@@ -228,3 +228,7 @@ C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Front
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\NotaEdit.cshtml.g.cs
 C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\NotaList.cshtml.g.cs
 D:\Mis Documentos\Ucaldas\DSR\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Ingreso\CambioContrasena.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Ingreso\CambioContrasena.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MisGrupos.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MisHorarios.cshtml.g.cs
+C:\Users\mcordoba\Documents\UCALDAS\CICLO3\proyectos\Educa\SGE.App\SGE.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Entidades\MisNotas.cshtml.g.cs

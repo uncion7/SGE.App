@@ -22,14 +22,32 @@
                     <td>@Model.Matricula.Id</td>
                 </tr>
                 <tr>
-                    <td>Grupo</td>
-                    <td>@Model.Matricula.Grupo.Nombre</td>
-                </tr>
-                <tr>
                     <td>Estudiante</td>
                     <td>
                         @Model.Matricula.Estudiante.Nombre
                         @Model.Matricula.Estudiante.Apellidos
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ciclo</td>
+                    <td>@Model.Matricula.Grupo.Ciclo.Nombre</td>
+                </tr>
+                <tr>
+                    <td>Grupo</td>
+                    <td>@Model.Matricula.Grupo.Nombre</td>
+                </tr>
+                <tr>
+                    <td>Formador</td>
+                    <td>
+                        @Model.Matricula.Grupo.Formador.Nombre
+                        @Model.Matricula.Grupo.Formador.Apellidos
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tutor</td>
+                    <td>
+                        @Model.Matricula.Grupo.Tutor.Nombre
+                        @Model.Matricula.Grupo.Tutor.Apellidos
                     </td>
                 </tr>
             </tbody>
