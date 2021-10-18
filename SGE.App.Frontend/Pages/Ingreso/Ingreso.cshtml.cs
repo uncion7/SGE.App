@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Http;
 using SGE.App.Persistencia;
 using SGE.App.Dominio;
 
+
+
 namespace SGE.App.Frontend.Pages
 {
     public class IngresoModel : PageModel
@@ -38,7 +40,7 @@ namespace SGE.App.Frontend.Pages
         {
             _appContext = new SGE.App.Persistencia.AppContext();
 
-            var p = _appContext.Usuarios.FirstOrDefault( p => p.User == Usuario);
+            var p = _appContext.Usuarios.Include(p => p.Rol).FirstOrDefault( p => p.User == Usuario);
             if(p == null)
             {
                 MensajeUsuario = "Usuario no existe";
@@ -52,12 +54,20 @@ namespace SGE.App.Frontend.Pages
             }
             else if(p.Entro == false)
             {
+<<<<<<< HEAD
+=======
+                HttpContext.Session.SetString("MiUsuario", Usuario);
+>>>>>>> d132e3cf13758448eb7336aad21feeb1745546cb
                 return RedirectToPage("./CambioContrasena");
             }
 
             else
             {
-            return RedirectToPage("../Index");
+                HttpContext.Session.SetString("MiNombre", p.Nombre);
+                HttpContext.Session.SetString("MiUsuario", Usuario);
+                HttpContext.Session.SetString("MiRol", p.Rol.Nombre);
+                return RedirectToPage("../Index");
+
             }
 
             return Page();
