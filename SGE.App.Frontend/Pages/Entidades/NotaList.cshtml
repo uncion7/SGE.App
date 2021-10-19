@@ -16,9 +16,14 @@
 <table class="table table-striped">
     <thead class="table-dark">
         <tr>
-            <th>Id</th>
-            <th>Calificacion</th>
             <th>Estudiante</th>
+            <th>Grupo</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Nota 3</th>
+            <th>Nota 4</th>
+            <th>Nota 5</th>
+            <th>Nota Definitiva</th>
             <th>Acciones</th>
         </tr>
     </thead>
@@ -26,9 +31,14 @@
         @foreach(var h in Model.Notas)
         {
             <tr>
-                <td>@h.Id</td>
-                <td>@h.Calificacion.Nombre</td>
                 <td>@h.Estudiante.Nombre</td>
+                <td>@h.Grupo.Nombre</td>
+                <td>@h.Nota1</td>
+                <td>@h.Nota2</td>
+                <td>@h.Nota3</td>
+                <td>@h.Nota4</td>
+                <td>@h.Nota5</td>
+                <td>@h.NotaDef</td>
                 <td>
                     <a class="btn btn-primary table-btn" data-toggle="tooltip" data-placement="top" title="Ver" asp-page="./NotaDetail" asp-route-notaId="@h.Id">
                         <i class="fas fa-eye"></i>
@@ -53,7 +63,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Desea eliminar este registro: @h.Calificacion</p>
+                            <p>Desea eliminar este registro: @h.Grupo</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

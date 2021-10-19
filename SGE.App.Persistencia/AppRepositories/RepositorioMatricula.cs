@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 using SGE.App.Dominio;
-
 
 namespace SGE.App.Persistencia
 {
@@ -15,16 +15,18 @@ namespace SGE.App.Persistencia
         ///</sumary>
         
         private readonly AppContext _appContext;
-        
+        private readonly IHttpContextAccessor _contextAccessor;
+
         ///<sumary>
         ///Metodo constructor utiliza
         ///Inyeccion de dependencias para garantizar el contexto
         ///</sumary>
         ///<param name="appContext"></param>//
 
-        public RepositorioMatricula(AppContext appContext)
+        public RepositorioMatricula(AppContext appContext, IHttpContextAccessor contextAccessor)
         {
             _appContext = appContext;
+            _contextAccessor = contextAccessor;
         }
 
         public Usuario usuario {get; set;}
@@ -86,13 +88,17 @@ namespace SGE.App.Persistencia
             return matriculaEncontrado;
         }
 
-        IEnumerable<Matricula> IRepositorioMatricula.GetAllMisGrupos(int usuarioId)
+        IEnumerable<Matricula> IRepositorioMatricula.GetAllMisGrupos()
         {   
-            
+
+            //var usuarioId = _contextAccessor.HttpContext.Session.GetString("MiId");
+            int usuarioId = 0;
+
             //Rol del Usuario
             usuario = _appContext.Usuarios
                 .Include(g=>g.Rol)
                 .FirstOrDefault(g=>g.Id == usuarioId);
+
             
             if(usuario.Rol.Nombre == "Formador")
             {
@@ -137,10 +143,7 @@ namespace SGE.App.Persistencia
                     .Include(g=>g.Grupo)    
                         .ThenInclude(g=>g.Tutor)
                     .Include(g=>g.Estudiante);
-            }
-            
-
-        
+            }        
             
         }
         

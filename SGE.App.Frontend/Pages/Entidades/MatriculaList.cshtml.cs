@@ -13,6 +13,7 @@ namespace SGE.App.Frontend.Pages
     {
         private readonly IRepositorioMatricula repositorioMatricula;
         public IEnumerable<Matricula> Matriculas{get;set;}
+        
         public MatriculaListModel(IRepositorioMatricula repositorioMatricula)
         {
             this.repositorioMatricula = repositorioMatricula;

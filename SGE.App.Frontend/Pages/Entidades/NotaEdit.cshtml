@@ -23,15 +23,31 @@
         <span asp-validation-for="Nota.Estudiante" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Nota.Calificacion"></label>
-        <select asp-for="CalificacionId" name="CalificacionId" class="form-control" asp-items="Model.listaCalificaciones">
-            <option>--- Seleccione una Calificacion ---</option>
+        <label asp-for="Nota.Grupo"></label>
+        <select asp-for="GrupoId" name="GrupoId" class="form-control" asp-items="Model.listaGrupos">
+            <option>--- Seleccione un Grupo ---</option>
         </select>
-        <span asp-validation-for="Nota.Calificacion" class="text-danger"></span>
+        <span asp-validation-for="Nota.Grupo" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Nota.Valor"></label>
-        <input asp-for="Nota.Valor" class="form-control">
+        <label asp-for="Nota.Nota1"></label>
+        <input asp-for="Nota.Nota1" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Nota.Nota2"></label>
+        <input asp-for="Nota.Nota2" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Nota.Nota3"></label>
+        <input asp-for="Nota.Nota3" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Nota.Nota4"></label>
+        <input asp-for="Nota.Nota4" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Nota.Nota5"></label>
+        <input asp-for="Nota.Nota5" class="form-control">
     </div>
     <button type="submit" class="btn btn-primary btn btn-block" data-toggle="tooltip" data-placement="top" title="Guardar">
         <i class="fas fa-2x fa-save"></i>        

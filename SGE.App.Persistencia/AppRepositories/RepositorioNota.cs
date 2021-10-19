@@ -43,14 +43,14 @@ namespace SGE.App.Persistencia
 
         IEnumerable<Nota> IRepositorioNota.GetAllNotas()
         {
-            return _appContext.Notas.Include(m => m.Estudiante).Include(m => m.Calificacion);
+            return _appContext.Notas.Include(m => m.Estudiante).Include(m => m.Grupo);
         }
 
         Nota IRepositorioNota.GetNota(int idNota)
         {
             return _appContext.Notas
                 .Include(m=>m.Estudiante)
-                .Include(m=>m.Calificacion)
+                .Include(m=>m.Grupo)
                 .FirstOrDefault(m => m.Id==idNota);
         }
 
@@ -59,9 +59,14 @@ namespace SGE.App.Persistencia
             var notaEncontrada =_appContext.Notas.FirstOrDefault(m => m.Id==nota.Id);
             if(notaEncontrada!=null)
             {
-                notaEncontrada.Valor = nota.Valor;
-                notaEncontrada.Calificacion = nota.Calificacion;
                 notaEncontrada.Estudiante = nota.Estudiante;
+                notaEncontrada.Grupo = nota.Grupo;
+                notaEncontrada.Nota1 = nota.Nota1;
+                notaEncontrada.Nota2 = nota.Nota2;
+                notaEncontrada.Nota3 = nota.Nota3;
+                notaEncontrada.Nota4 = nota.Nota4;
+                notaEncontrada.Nota5 = nota.Nota5;
+                notaEncontrada.NotaDef = nota.NotaDef;
                 _appContext.SaveChanges();
             }
             return notaEncontrada;

@@ -183,20 +183,35 @@ namespace SGE.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("CalificacionId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("EstudianteId")
                         .HasColumnType("int");
 
-                    b.Property<float>("Valor")
+                    b.Property<int?>("GrupoId")
+                        .HasColumnType("int");
+
+                    b.Property<float>("Nota1")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Nota2")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Nota3")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Nota4")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Nota5")
+                        .HasColumnType("real");
+
+                    b.Property<float>("NotaDef")
                         .HasColumnType("real");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CalificacionId");
-
                     b.HasIndex("EstudianteId");
+
+                    b.HasIndex("GrupoId");
 
                     b.ToTable("Notas");
                 });
@@ -339,17 +354,17 @@ namespace SGE.App.Persistencia.Migrations
 
             modelBuilder.Entity("SGE.App.Dominio.Nota", b =>
                 {
-                    b.HasOne("SGE.App.Dominio.Calificacion", "Calificacion")
-                        .WithMany()
-                        .HasForeignKey("CalificacionId");
-
                     b.HasOne("SGE.App.Dominio.Usuario", "Estudiante")
                         .WithMany()
                         .HasForeignKey("EstudianteId");
 
-                    b.Navigation("Calificacion");
+                    b.HasOne("SGE.App.Dominio.Grupo", "Grupo")
+                        .WithMany()
+                        .HasForeignKey("GrupoId");
 
                     b.Navigation("Estudiante");
+
+                    b.Navigation("Grupo");
                 });
 
             modelBuilder.Entity("SGE.App.Dominio.Usuario", b =>

@@ -54,10 +54,7 @@ namespace SGE.App.Frontend.Pages
             }
             else if(p.Entro == false)
             {
-<<<<<<< HEAD
-=======
                 HttpContext.Session.SetString("MiUsuario", Usuario);
->>>>>>> d132e3cf13758448eb7336aad21feeb1745546cb
                 return RedirectToPage("./CambioContrasena");
             }
 
@@ -66,6 +63,7 @@ namespace SGE.App.Frontend.Pages
                 HttpContext.Session.SetString("MiNombre", p.Nombre);
                 HttpContext.Session.SetString("MiUsuario", Usuario);
                 HttpContext.Session.SetString("MiRol", p.Rol.Nombre);
+                HttpContext.Session.SetString("MiId", p.Id.ToString());
                 return RedirectToPage("../Index");
 
             }
