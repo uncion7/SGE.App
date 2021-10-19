@@ -64,6 +64,71 @@ namespace SGE.App.Persistencia
             }
             return horarioEncontrado;
         }
+
+        /*
+        IEnumerable<Horario> IRepositorioHorario.GetAllMisHorarios(int usuarioId)
+        {   
+
+            
+            //Rol del Usuario
+            usuario = _appContext.Usuarios
+                .Include(g=>g.Rol)
+                .FirstOrDefault(g=>g.Id == usuarioId);
+
+            
+            if(usuario.Rol.Nombre == "Formador")
+            {
+                //Busca los Grupos del Formador
+                var misGrupos = _appContext.Grupos
+                    .Include(g=>g.Grupo)
+                        .ThenInclude(g=>g.Ciclo)
+                    .Where(g => g.Grupo.Formador.Id == usuarioId);
+
+                //Busca los Horarios de los Grupos del Formador
+                return _appContext.Horarios
+                    .Include(g=>g.Grupo)
+                        .ThenInclude(g=>g.Ciclo);
+                    //.Where(g => g.Grupo.Formador.Id ==  );
+
+            }
+            if(usuario.Rol.Nombre =="Tutor")
+            {
+                //Si el usuario es: Formador
+                return _appContext.Matricula
+                    .Include(g=>g.Grupo)
+                        .ThenInclude(g=>g.Ciclo)
+                    .Include(g=>g.Grupo)    
+                        .ThenInclude(g=>g.Formador)
+                    .Include(g=>g.Estudiante)
+                    .Where(g => g.Grupo.Tutor.Id == usuarioId);
+            }
+            if(usuario.Rol.Nombre == "Estudiante")
+            {
+                //Si el usuario es: Formador
+                return _appContext.Matricula
+                    .Include(g=>g.Grupo)
+                        .ThenInclude(g=>g.Ciclo)
+                    .Include(g=>g.Grupo)    
+                        .ThenInclude(g=>g.Formador)
+                    .Include(g=>g.Grupo)    
+                        .ThenInclude(g=>g.Tutor)    
+                    .Include(g=>g.Estudiante)
+                    .Where(g => g.Estudiante.Id == usuarioId);
+            }
+            else
+            {
+                return _appContext.Matricula
+                    .Include(g=>g.Grupo)
+                        .ThenInclude(g=>g.Ciclo)
+                    .Include(g=>g.Grupo)    
+                        .ThenInclude(g=>g.Formador)    
+                    .Include(g=>g.Grupo)    
+                        .ThenInclude(g=>g.Tutor)
+                    .Include(g=>g.Estudiante);
+            }        
+            
+        }
+        */
         
     }
 }

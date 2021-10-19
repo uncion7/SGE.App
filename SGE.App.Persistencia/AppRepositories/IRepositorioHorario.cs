@@ -9,6 +9,8 @@ namespace SGE.App.Persistencia
         Horario AddHorario(Horario horario);
         Horario UpdateHorario(Horario horario);
         void DeleteHorario(int idHorario);
-        Horario GetHorario(int idHorario); 
+        Horario GetHorario(int idHorario);
+        //IEnumerable<Horario> GetAllMisHorarios(int usuarioId);
+
     }
 }

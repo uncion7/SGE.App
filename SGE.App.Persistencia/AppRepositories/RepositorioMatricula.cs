@@ -15,18 +15,16 @@ namespace SGE.App.Persistencia
         ///</sumary>
         
         private readonly AppContext _appContext;
-        private readonly IHttpContextAccessor _contextAccessor;
-
+        
         ///<sumary>
         ///Metodo constructor utiliza
         ///Inyeccion de dependencias para garantizar el contexto
         ///</sumary>
         ///<param name="appContext"></param>//
 
-        public RepositorioMatricula(AppContext appContext, IHttpContextAccessor contextAccessor)
+        public RepositorioMatricula(AppContext appContext)
         {
             _appContext = appContext;
-            _contextAccessor = contextAccessor;
         }
 
         public Usuario usuario {get; set;}
@@ -88,11 +86,8 @@ namespace SGE.App.Persistencia
             return matriculaEncontrado;
         }
 
-        IEnumerable<Matricula> IRepositorioMatricula.GetAllMisGrupos()
+        IEnumerable<Matricula> IRepositorioMatricula.GetAllMisGrupos(int usuarioId)
         {   
-
-            //var usuarioId = _contextAccessor.HttpContext.Session.GetString("MiId");
-            int usuarioId = 0;
 
             //Rol del Usuario
             usuario = _appContext.Usuarios
@@ -140,6 +135,8 @@ namespace SGE.App.Persistencia
                 return _appContext.Matricula
                     .Include(g=>g.Grupo)
                         .ThenInclude(g=>g.Ciclo)
+                    .Include(g=>g.Grupo)    
+                        .ThenInclude(g=>g.Formador)    
                     .Include(g=>g.Grupo)    
                         .ThenInclude(g=>g.Tutor)
                     .Include(g=>g.Estudiante);

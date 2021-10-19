@@ -18,13 +18,14 @@ namespace SGE.App.Frontend.Pages
         {
             this.repositorioMatricula = repositorioMatricula;
         }
-        public void OnGet(int? matriculaId)
+        public void OnGet(int? matriculaId, int? usuarioId)
         {
             if(matriculaId>0)
             {
                 repositorioMatricula.DeleteMatricula(matriculaId.Value);
             }
-            Matriculas = repositorioMatricula.GetAllMatriculas();
+            //Matriculas = repositorioMatricula.GetAllMatriculas();
+            Matriculas = repositorioMatricula.GetAllMisGrupos(usuarioId.Value);
         }
     }
 }

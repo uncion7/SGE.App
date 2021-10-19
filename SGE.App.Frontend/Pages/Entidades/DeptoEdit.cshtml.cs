@@ -36,7 +36,7 @@ namespace SGE.App.Frontend.Pages
                 return RedirectToPage("./NotFound");
             }
             else
-            return Page();
+            return RedirectToPage("./DepartamentoList");
         }
 
         public IActionResult OnPost()

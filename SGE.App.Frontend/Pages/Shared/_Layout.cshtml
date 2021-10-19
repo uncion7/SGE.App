@@ -22,6 +22,7 @@
                         
                         @using Microsoft.AspNetCore.Http;
                         @inject IHttpContextAccessor HttpContextAccessoor
+                        @{ var usuario_id = @HttpContextAccessoor.HttpContext.Session.GetInt32("MiId"); }
                         @if(@HttpContextAccessoor.HttpContext.Session.GetString("MiRol")!= null &&
                             @HttpContextAccessoor.HttpContext.Session.GetString("MiRol").Equals("Administrador"))
                         {
@@ -45,7 +46,7 @@
                                     <a class="nav-link text-dark" asp-area="" asp-page="/Entidades/GrupoList">Grupo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Entidades/MatriculaList">Matricula</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Entidades/MatriculaList" asp-route-usuarioId="@usuario_id">Matricula</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-page="/Entidades/HorarioList">Horario</a>
@@ -120,7 +121,7 @@
                         <a class="nav-link btn btn-primary" asp-area="" asp-page="/Ingreso/Logout">
                             <i class="fas fa-user"></i> Cerrar Sesion
                         </a>
-                        <div class = "nav-item">@HttpContextAccessoor.HttpContext.Session.GetString("MiNombre")</div>
+                        <div class = "nav-link">@HttpContextAccessoor.HttpContext.Session.GetString("MiNombre")</div>
                     </div>
                 }
                 </div>

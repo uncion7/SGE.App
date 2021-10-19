@@ -63,7 +63,8 @@ namespace SGE.App.Frontend.Pages
                 HttpContext.Session.SetString("MiNombre", p.Nombre);
                 HttpContext.Session.SetString("MiUsuario", Usuario);
                 HttpContext.Session.SetString("MiRol", p.Rol.Nombre);
-                HttpContext.Session.SetString("MiId", p.Id.ToString());
+                HttpContext.Session.SetInt32("MiId", p.Id);
+                
                 return RedirectToPage("../Index");
 
             }

@@ -20,7 +20,7 @@ namespace SGE.App.Frontend.Pages
         public void OnGet(int usuarioId)
 
         {
-            MisGrupos = repositorioMatricula.GetAllMisGrupos();
+            //MisGrupos = repositorioMatricula.GetAllMisGrupos2();
         }
     }
 }
